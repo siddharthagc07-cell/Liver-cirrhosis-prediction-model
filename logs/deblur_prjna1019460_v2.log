@@ -1,0 +1,7 @@
+/home/siddharth/miniconda3/envs/lc_qiime/bin/deblur:534: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  logger.warn('deblur version %s workflow started on %s' %
+/home/siddharth/miniconda3/envs/lc_qiime/bin/deblur:536: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  logger.warn('parameters: %s' % locals())
+Saved FeatureTable[Frequency] to: /home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/table.qza
+Saved FeatureData[Sequence] to: /home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/rep-seqs.qza
+Saved DeblurStats to: /home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur-stats.qza

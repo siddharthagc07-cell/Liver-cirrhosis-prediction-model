@@ -1,0 +1,163 @@
+R version 4.3.3 (2024-02-29) 
+Loading required package: Rcpp
+DADA2: 1.30.0 / Rcpp: 1.0.13.1 / RcppParallel: 5.1.9 
+2) Filtering The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459677_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459677_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459675_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459675_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459678_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459678_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459676_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459676_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459681_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459681_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459679_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459679_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459682_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459682_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459680_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459680_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459685_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459685_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459683_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459683_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459686_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459686_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459684_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459684_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459689_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459689_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459687_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459687_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459690_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459690_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459688_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459688_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459693_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459693_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459691_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459691_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459694_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459694_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459692_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459692_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459697_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459697_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459695_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459695_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459698_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459698_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459701_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459701_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459696_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459696_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459702_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459702_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459699_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459699_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459705_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459705_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459700_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459700_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459706_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459706_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459709_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459709_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459703_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459703_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459704_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459704_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459710_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459710_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459713_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459713_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459707_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459707_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459714_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459714_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459708_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459708_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459717_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459717_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459711_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459711_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459712_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459712_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459721_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459721_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459718_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459718_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459716_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459716_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459722_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459722_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459715_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459715_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459725_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459725_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459726_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459726_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459719_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459719_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459720_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459720_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459730_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459730_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459729_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459729_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459724_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459724_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459734_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459734_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459723_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459723_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459728_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459728_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459738_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459738_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459733_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459733_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459732_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459732_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459727_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459727_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459737_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459737_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459736_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459736_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459742_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459742_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459731_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459731_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459746_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459746_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459741_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459741_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459740_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459740_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459735_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459735_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459750_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459750_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459744_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459744_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459745_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459745_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459739_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459739_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459754_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459754_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459749_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459749_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459748_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459748_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459743_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459743_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459758_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459758_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459753_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459753_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459752_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459752_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459747_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459747_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459762_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459762_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459756_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459756_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459757_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459757_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459751_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459751_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459766_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459766_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459760_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459760_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459761_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459761_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459755_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459755_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459764_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459764_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459759_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459759_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459770_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459770_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459765_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459765_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459774_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459774_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459768_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459768_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459763_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459763_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459769_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459769_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459772_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459772_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459767_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459767_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459778_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459778_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459773_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459773_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459771_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459771_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459776_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459776_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459782_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459782_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459777_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459777_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459775_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459775_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459780_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459780_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459779_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459779_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459786_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459786_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459781_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459781_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459784_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459784_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459785_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459785_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459790_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459790_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459783_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459783_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459794_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459794_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459787_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459787_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459788_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459788_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459789_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459789_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459792_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459792_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459793_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459793_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459791_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459791_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459797_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459797_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459796_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459796_L001_R2_001.fastq.gz not written.
+The filter removed all reads: /home/siddharth/tmp/tmpf184oec9/filt_f/SRR33459795_L001_R1_001.fastq.gz and /home/siddharth/tmp/tmpf184oec9/filt_r/SRR33459795_L001_R2_001.fastq.gz not written.
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Error: No reads passed the filter (was truncLen longer than the read length?)
+Traceback (most recent call last):
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2_dada2/_denoise.py", line 353, in denoise_paired
+    run_commands([cmd])
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2_dada2/_denoise.py", line 38, in run_commands
+    subprocess.run(cmd, check=True)
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['run_dada.R', '--input_directory', '/home/siddharth/tmp/tmpf184oec9/forward', '--input_directory_reverse', '/home/siddharth/tmp/tmpf184oec9/reverse', '--output_path', '/home/siddharth/tmp/tmpf184oec9/output.tsv.biom', '--output_track', '/home/siddharth/tmp/tmpf184oec9/track.tsv', '--filtered_directory', '/home/siddharth/tmp/tmpf184oec9/filt_f', '--filtered_directory_reverse', '/home/siddharth/tmp/tmpf184oec9/filt_r', '--truncation_length', '260', '--truncation_length_reverse', '200', '--trim_left', '0', '--trim_left_reverse', '0', '--max_expected_errors', '2', '--max_expected_errors_reverse', '5', '--truncation_quality_score', '2', '--min_overlap', '12', '--pooling_method', 'independent', '--chimera_method', 'consensus', '--min_parental_fold', '1.0', '--allow_one_off', 'False', '--num_threads', '0', '--learn_min_reads', '1000000']' returned non-zero exit status 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2cli/commands.py", line 530, in __call__
+    results = self._execute_action(
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2cli/commands.py", line 602, in _execute_action
+    results = action(**arguments)
+  File "<decorator-gen-49>", line 2, in denoise_paired
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/qiime2/sdk/action.py", line 299, in bound_callable
+    outputs = self._callable_executor_(
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/qiime2/sdk/action.py", line 570, in _callable_executor_
+    output_views = self._callable(**view_args)
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2_dada2/_denoise.py", line 356, in denoise_paired
+    raise ValueError(
+ValueError: No reads passed the filter. trunc_len_f (260) or trunc_len_r (200) may be individually longer than read lengths, or trunc_len_f + trunc_len_r may be shorter than the length of the amplicon + 12 nucleotides (the length of the overlap). Alternatively, other arguments (such as max_ee or trunc_q) may be preventing reads from passing the filter.
+
+Plugin error from dada2:
+
+  No reads passed the filter. trunc_len_f (260) or trunc_len_r (200) may be individually longer than read lengths, or trunc_len_f + trunc_len_r may be shorter than the length of the amplicon + 12 nucleotides (the length of the overlap). Alternatively, other arguments (such as max_ee or trunc_q) may be preventing reads from passing the filter.
+
+See above for debug info.
+Running external command line application(s). This may print messages to stdout and/or stderr.
+The command(s) being run are below. These commands cannot be manually re-run as they will depend on temporary files that no longer exist.
+
+Command: run_dada.R --input_directory /home/siddharth/tmp/tmpf184oec9/forward --input_directory_reverse /home/siddharth/tmp/tmpf184oec9/reverse --output_path /home/siddharth/tmp/tmpf184oec9/output.tsv.biom --output_track /home/siddharth/tmp/tmpf184oec9/track.tsv --filtered_directory /home/siddharth/tmp/tmpf184oec9/filt_f --filtered_directory_reverse /home/siddharth/tmp/tmpf184oec9/filt_r --truncation_length 260 --truncation_length_reverse 200 --trim_left 0 --trim_left_reverse 0 --max_expected_errors 2 --max_expected_errors_reverse 5 --truncation_quality_score 2 --min_overlap 12 --pooling_method independent --chimera_method consensus --min_parental_fold 1.0 --allow_one_off False --num_threads 0 --learn_min_reads 1000000
+

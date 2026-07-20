@@ -1,0 +1,790 @@
+INFO(127580177532736)2026-06-25 18:58:47,580:*************************
+INFO(127580177532736)2026-06-25 18:58:47,580:deblurring started
+WARNING(127580177532736)2026-06-25 18:58:47,581:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data
+WARNING(127580177532736)2026-06-25 18:58:47,581:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': (), 'neg_ref_fp': (), 'neg_ref_db_fp': (), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 4, 'is_worker_thread': False, 'logger': <Logger __main__ (INFO)>}
+INFO(127580177532736)2026-06-25 18:58:47,581:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127580177532736)2026-06-25 18:58:47,581:deblur main program started
+INFO(127580177532736)2026-06-25 18:58:47,581:processing directory /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data
+INFO(127580177532736)2026-06-25 18:58:47,583:building negative db sortmerna index files
+INFO(127580177532736)2026-06-25 18:58:47,583:build_index_sortmerna files ['/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/deblur/support_files/artifacts.fa'] to dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(127580177532736)2026-06-25 18:58:47,622:building positive db sortmerna index files
+INFO(127580177532736)2026-06-25 18:58:47,622:build_index_sortmerna files ['/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/deblur/support_files/88_otus.fasta'] to dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(127580177532736)2026-06-25 18:59:48,910:parallel processing per sample fasta files
+INFO(127580177532736)2026-06-25 18:59:48,910:parallel deblur started for 40 inputs
+INFO(137355114002240)2026-06-25 18:59:49,783:*************************
+INFO(137355114002240)2026-06-25 18:59:49,783:deblurring started
+WARNING(137355114002240)2026-06-25 18:59:49,783:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159185_3_L001_R1_001.fastq.gz
+WARNING(137355114002240)2026-06-25 18:59:49,783:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159185_3_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(137355114002240)2026-06-25 18:59:49,783:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(137355114002240)2026-06-25 18:59:49,783:deblur worker thread started
+INFO(137355114002240)2026-06-25 18:59:49,783:processing per sample fasta files
+INFO(137355114002240)2026-06-25 18:59:49,784:--------------------------------------------------------
+INFO(137355114002240)2026-06-25 18:59:49,784:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159185_3_L001_R1_001.fastq.gz
+INFO(131946329081664)2026-06-25 18:59:49,888:*************************
+INFO(131946329081664)2026-06-25 18:59:49,888:deblurring started
+WARNING(131946329081664)2026-06-25 18:59:49,889:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159192_10_L001_R1_001.fastq.gz
+WARNING(131946329081664)2026-06-25 18:59:49,889:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159192_10_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(131946329081664)2026-06-25 18:59:49,889:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(131946329081664)2026-06-25 18:59:49,889:deblur worker thread started
+INFO(131946329081664)2026-06-25 18:59:49,889:processing per sample fasta files
+INFO(131946329081664)2026-06-25 18:59:49,889:--------------------------------------------------------
+INFO(131946329081664)2026-06-25 18:59:49,889:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159192_10_L001_R1_001.fastq.gz
+INFO(128947910141760)2026-06-25 18:59:49,902:*************************
+INFO(128947910141760)2026-06-25 18:59:49,902:deblurring started
+WARNING(128947910141760)2026-06-25 18:59:49,903:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159194_12_L001_R1_001.fastq.gz
+WARNING(128947910141760)2026-06-25 18:59:49,903:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159194_12_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(128947910141760)2026-06-25 18:59:49,903:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(128947910141760)2026-06-25 18:59:49,903:deblur worker thread started
+INFO(128947910141760)2026-06-25 18:59:49,903:processing per sample fasta files
+INFO(128947910141760)2026-06-25 18:59:49,903:--------------------------------------------------------
+INFO(128947910141760)2026-06-25 18:59:49,903:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159194_12_L001_R1_001.fastq.gz
+INFO(138140605519680)2026-06-25 18:59:49,915:*************************
+INFO(138140605519680)2026-06-25 18:59:49,915:deblurring started
+WARNING(138140605519680)2026-06-25 18:59:49,916:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159212_30_L001_R1_001.fastq.gz
+WARNING(138140605519680)2026-06-25 18:59:49,916:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159212_30_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(138140605519680)2026-06-25 18:59:49,916:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(138140605519680)2026-06-25 18:59:49,916:deblur worker thread started
+INFO(138140605519680)2026-06-25 18:59:49,916:processing per sample fasta files
+INFO(138140605519680)2026-06-25 18:59:49,916:--------------------------------------------------------
+INFO(138140605519680)2026-06-25 18:59:49,916:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159212_30_L001_R1_001.fastq.gz
+INFO(128947910141760)2026-06-25 18:59:55,039:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159194_12_L001_R1_001.fastq.gz.trim
+INFO(137355114002240)2026-06-25 18:59:55,073:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159185_3_L001_R1_001.fastq.gz.trim
+INFO(128947910141760)2026-06-25 18:59:55,092:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159194_12_L001_R1_001.fastq.gz.trim.derep
+INFO(137355114002240)2026-06-25 18:59:55,114:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159185_3_L001_R1_001.fastq.gz.trim.derep
+INFO(131946329081664)2026-06-25 18:59:55,162:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159192_10_L001_R1_001.fastq.gz.trim
+INFO(131946329081664)2026-06-25 18:59:55,225:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159192_10_L001_R1_001.fastq.gz.trim.derep
+INFO(138140605519680)2026-06-25 18:59:55,371:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159212_30_L001_R1_001.fastq.gz.trim
+INFO(138140605519680)2026-06-25 18:59:55,432:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159212_30_L001_R1_001.fastq.gz.trim.derep
+INFO(128947910141760)2026-06-25 18:59:55,575:total sequences 1512, passing sequences 1512, failing sequences 0
+INFO(128947910141760)2026-06-25 18:59:55,575:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159194_12_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(137355114002240)2026-06-25 18:59:55,580:total sequences 1617, passing sequences 1617, failing sequences 0
+INFO(137355114002240)2026-06-25 18:59:55,581:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159185_3_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(131946329081664)2026-06-25 18:59:55,742:total sequences 1518, passing sequences 1518, failing sequences 0
+INFO(131946329081664)2026-06-25 18:59:55,742:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159192_10_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(138140605519680)2026-06-25 18:59:55,914:total sequences 1573, passing sequences 1573, failing sequences 0
+INFO(138140605519680)2026-06-25 18:59:55,914:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159212_30_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(128947910141760)2026-06-25 19:00:00,464:deblurring 1512 sequences
+INFO(137355114002240)2026-06-25 19:00:00,978:deblurring 1617 sequences
+INFO(131946329081664)2026-06-25 19:00:01,112:deblurring 1518 sequences
+INFO(138140605519680)2026-06-25 19:00:01,214:deblurring 1573 sequences
+INFO(131946329081664)2026-06-25 19:00:02,333:439 unique sequences left following deblurring
+INFO(131946329081664)2026-06-25 19:00:02,336:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159192_10_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(137355114002240)2026-06-25 19:00:02,344:508 unique sequences left following deblurring
+INFO(137355114002240)2026-06-25 19:00:02,346:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159185_3_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(131946329081664)2026-06-25 19:00:02,749:finished processing file
+INFO(131946329081664)2026-06-25 19:00:02,750:finished processing per sample fasta files
+INFO(131946329081664)2026-06-25 19:00:02,750:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159192_10_L001_R1_001.fastq.gz finished
+INFO(138140605519680)2026-06-25 19:00:02,785:558 unique sequences left following deblurring
+INFO(138140605519680)2026-06-25 19:00:02,789:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159212_30_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(128947910141760)2026-06-25 19:00:02,881:846 unique sequences left following deblurring
+INFO(128947910141760)2026-06-25 19:00:02,887:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159194_12_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(137355114002240)2026-06-25 19:00:02,919:finished processing file
+INFO(137355114002240)2026-06-25 19:00:02,920:finished processing per sample fasta files
+INFO(137355114002240)2026-06-25 19:00:02,920:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159185_3_L001_R1_001.fastq.gz finished
+INFO(138140605519680)2026-06-25 19:00:03,337:finished processing file
+INFO(138140605519680)2026-06-25 19:00:03,338:finished processing per sample fasta files
+INFO(138140605519680)2026-06-25 19:00:03,338:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159212_30_L001_R1_001.fastq.gz finished
+INFO(128947910141760)2026-06-25 19:00:03,824:finished processing file
+INFO(128947910141760)2026-06-25 19:00:03,825:finished processing per sample fasta files
+INFO(128947910141760)2026-06-25 19:00:03,825:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159194_12_L001_R1_001.fastq.gz finished
+INFO(135349203072832)2026-06-25 19:00:03,876:*************************
+INFO(135349203072832)2026-06-25 19:00:03,876:deblurring started
+WARNING(135349203072832)2026-06-25 19:00:03,877:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159196_14_L001_R1_001.fastq.gz
+WARNING(135349203072832)2026-06-25 19:00:03,877:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159196_14_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(135349203072832)2026-06-25 19:00:03,877:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(135349203072832)2026-06-25 19:00:03,877:deblur worker thread started
+INFO(135349203072832)2026-06-25 19:00:03,877:processing per sample fasta files
+INFO(135349203072832)2026-06-25 19:00:03,877:--------------------------------------------------------
+INFO(135349203072832)2026-06-25 19:00:03,877:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159196_14_L001_R1_001.fastq.gz
+INFO(139442500052800)2026-06-25 19:00:04,054:*************************
+INFO(139442500052800)2026-06-25 19:00:04,054:deblurring started
+WARNING(139442500052800)2026-06-25 19:00:04,055:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159200_18_L001_R1_001.fastq.gz
+WARNING(139442500052800)2026-06-25 19:00:04,055:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159200_18_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(139442500052800)2026-06-25 19:00:04,055:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(139442500052800)2026-06-25 19:00:04,055:deblur worker thread started
+INFO(139442500052800)2026-06-25 19:00:04,055:processing per sample fasta files
+INFO(139442500052800)2026-06-25 19:00:04,055:--------------------------------------------------------
+INFO(139442500052800)2026-06-25 19:00:04,055:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159200_18_L001_R1_001.fastq.gz
+INFO(131038821812032)2026-06-25 19:00:04,351:*************************
+INFO(131038821812032)2026-06-25 19:00:04,351:deblurring started
+WARNING(131038821812032)2026-06-25 19:00:04,352:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159205_23_L001_R1_001.fastq.gz
+WARNING(131038821812032)2026-06-25 19:00:04,352:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159205_23_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(131038821812032)2026-06-25 19:00:04,352:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(131038821812032)2026-06-25 19:00:04,352:deblur worker thread started
+INFO(131038821812032)2026-06-25 19:00:04,352:processing per sample fasta files
+INFO(131038821812032)2026-06-25 19:00:04,352:--------------------------------------------------------
+INFO(131038821812032)2026-06-25 19:00:04,352:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159205_23_L001_R1_001.fastq.gz
+INFO(138006730041152)2026-06-25 19:00:05,015:*************************
+INFO(138006730041152)2026-06-25 19:00:05,015:deblurring started
+WARNING(138006730041152)2026-06-25 19:00:05,015:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159210_28_L001_R1_001.fastq.gz
+WARNING(138006730041152)2026-06-25 19:00:05,016:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159210_28_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(138006730041152)2026-06-25 19:00:05,016:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(138006730041152)2026-06-25 19:00:05,016:deblur worker thread started
+INFO(138006730041152)2026-06-25 19:00:05,016:processing per sample fasta files
+INFO(138006730041152)2026-06-25 19:00:05,016:--------------------------------------------------------
+INFO(138006730041152)2026-06-25 19:00:05,016:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159210_28_L001_R1_001.fastq.gz
+INFO(139442500052800)2026-06-25 19:00:09,093:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159200_18_L001_R1_001.fastq.gz.trim
+INFO(139442500052800)2026-06-25 19:00:09,138:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159200_18_L001_R1_001.fastq.gz.trim.derep
+INFO(131038821812032)2026-06-25 19:00:09,456:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159205_23_L001_R1_001.fastq.gz.trim
+INFO(131038821812032)2026-06-25 19:00:09,511:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159205_23_L001_R1_001.fastq.gz.trim.derep
+INFO(139442500052800)2026-06-25 19:00:09,607:total sequences 1527, passing sequences 1527, failing sequences 0
+INFO(139442500052800)2026-06-25 19:00:09,608:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159200_18_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(135349203072832)2026-06-25 19:00:09,878:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159196_14_L001_R1_001.fastq.gz.trim
+INFO(135349203072832)2026-06-25 19:00:09,938:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159196_14_L001_R1_001.fastq.gz.trim.derep
+INFO(131038821812032)2026-06-25 19:00:09,989:total sequences 1509, passing sequences 1509, failing sequences 0
+INFO(131038821812032)2026-06-25 19:00:09,989:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159205_23_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(135349203072832)2026-06-25 19:00:10,467:total sequences 1919, passing sequences 1919, failing sequences 0
+INFO(135349203072832)2026-06-25 19:00:10,467:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159196_14_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(138006730041152)2026-06-25 19:00:10,707:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159210_28_L001_R1_001.fastq.gz.trim
+INFO(138006730041152)2026-06-25 19:00:10,749:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159210_28_L001_R1_001.fastq.gz.trim.derep
+INFO(138006730041152)2026-06-25 19:00:11,265:total sequences 1731, passing sequences 1731, failing sequences 0
+INFO(138006730041152)2026-06-25 19:00:11,265:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159210_28_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(139442500052800)2026-06-25 19:00:14,483:deblurring 1527 sequences
+INFO(131038821812032)2026-06-25 19:00:15,153:deblurring 1509 sequences
+INFO(139442500052800)2026-06-25 19:00:15,502:365 unique sequences left following deblurring
+INFO(139442500052800)2026-06-25 19:00:15,505:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159200_18_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(139442500052800)2026-06-25 19:00:15,860:finished processing file
+INFO(139442500052800)2026-06-25 19:00:15,861:finished processing per sample fasta files
+INFO(139442500052800)2026-06-25 19:00:15,861:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159200_18_L001_R1_001.fastq.gz finished
+INFO(134946494707520)2026-06-25 19:00:16,921:*************************
+INFO(134946494707520)2026-06-25 19:00:16,922:deblurring started
+WARNING(134946494707520)2026-06-25 19:00:16,922:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159221_39_L001_R1_001.fastq.gz
+WARNING(134946494707520)2026-06-25 19:00:16,922:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159221_39_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(134946494707520)2026-06-25 19:00:16,922:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(134946494707520)2026-06-25 19:00:16,922:deblur worker thread started
+INFO(134946494707520)2026-06-25 19:00:16,922:processing per sample fasta files
+INFO(134946494707520)2026-06-25 19:00:16,922:--------------------------------------------------------
+INFO(134946494707520)2026-06-25 19:00:16,922:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159221_39_L001_R1_001.fastq.gz
+INFO(131038821812032)2026-06-25 19:00:17,044:730 unique sequences left following deblurring
+INFO(131038821812032)2026-06-25 19:00:17,048:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159205_23_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(138006730041152)2026-06-25 19:00:17,252:deblurring 1731 sequences
+INFO(135349203072832)2026-06-25 19:00:17,553:deblurring 1919 sequences
+INFO(131038821812032)2026-06-25 19:00:17,845:finished processing file
+INFO(131038821812032)2026-06-25 19:00:17,846:finished processing per sample fasta files
+INFO(131038821812032)2026-06-25 19:00:17,846:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159205_23_L001_R1_001.fastq.gz finished
+INFO(133086315116352)2026-06-25 19:00:18,950:*************************
+INFO(133086315116352)2026-06-25 19:00:18,950:deblurring started
+WARNING(133086315116352)2026-06-25 19:00:18,950:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159209_27_L001_R1_001.fastq.gz
+WARNING(133086315116352)2026-06-25 19:00:18,950:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159209_27_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(133086315116352)2026-06-25 19:00:18,950:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(133086315116352)2026-06-25 19:00:18,950:deblur worker thread started
+INFO(133086315116352)2026-06-25 19:00:18,951:processing per sample fasta files
+INFO(133086315116352)2026-06-25 19:00:18,951:--------------------------------------------------------
+INFO(133086315116352)2026-06-25 19:00:18,951:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159209_27_L001_R1_001.fastq.gz
+INFO(138006730041152)2026-06-25 19:00:19,589:785 unique sequences left following deblurring
+INFO(138006730041152)2026-06-25 19:00:19,594:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159210_28_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(135349203072832)2026-06-25 19:00:20,003:720 unique sequences left following deblurring
+INFO(135349203072832)2026-06-25 19:00:20,007:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159196_14_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(138006730041152)2026-06-25 19:00:20,417:finished processing file
+INFO(138006730041152)2026-06-25 19:00:20,418:finished processing per sample fasta files
+INFO(138006730041152)2026-06-25 19:00:20,418:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159210_28_L001_R1_001.fastq.gz finished
+INFO(135349203072832)2026-06-25 19:00:20,810:finished processing file
+INFO(135349203072832)2026-06-25 19:00:20,810:finished processing per sample fasta files
+INFO(135349203072832)2026-06-25 19:00:20,810:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159196_14_L001_R1_001.fastq.gz finished
+INFO(134946494707520)2026-06-25 19:00:21,124:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159221_39_L001_R1_001.fastq.gz.trim
+INFO(134946494707520)2026-06-25 19:00:21,174:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159221_39_L001_R1_001.fastq.gz.trim.derep
+INFO(128751203403584)2026-06-25 19:00:21,477:*************************
+INFO(128751203403584)2026-06-25 19:00:21,477:deblurring started
+WARNING(128751203403584)2026-06-25 19:00:21,477:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159219_37_L001_R1_001.fastq.gz
+WARNING(128751203403584)2026-06-25 19:00:21,477:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159219_37_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(128751203403584)2026-06-25 19:00:21,477:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(128751203403584)2026-06-25 19:00:21,477:deblur worker thread started
+INFO(128751203403584)2026-06-25 19:00:21,477:processing per sample fasta files
+INFO(128751203403584)2026-06-25 19:00:21,477:--------------------------------------------------------
+INFO(128751203403584)2026-06-25 19:00:21,477:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159219_37_L001_R1_001.fastq.gz
+INFO(134946494707520)2026-06-25 19:00:21,672:total sequences 678, passing sequences 678, failing sequences 0
+INFO(134946494707520)2026-06-25 19:00:21,672:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159221_39_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(137035204572992)2026-06-25 19:00:21,893:*************************
+INFO(137035204572992)2026-06-25 19:00:21,894:deblurring started
+WARNING(137035204572992)2026-06-25 19:00:21,894:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159213_31_L001_R1_001.fastq.gz
+WARNING(137035204572992)2026-06-25 19:00:21,894:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159213_31_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(137035204572992)2026-06-25 19:00:21,894:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(137035204572992)2026-06-25 19:00:21,894:deblur worker thread started
+INFO(137035204572992)2026-06-25 19:00:21,894:processing per sample fasta files
+INFO(137035204572992)2026-06-25 19:00:21,894:--------------------------------------------------------
+INFO(137035204572992)2026-06-25 19:00:21,894:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159213_31_L001_R1_001.fastq.gz
+INFO(134946494707520)2026-06-25 19:00:23,780:deblurring 678 sequences
+INFO(134946494707520)2026-06-25 19:00:23,951:151 unique sequences left following deblurring
+INFO(134946494707520)2026-06-25 19:00:23,952:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159221_39_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(134946494707520)2026-06-25 19:00:24,080:finished processing file
+INFO(134946494707520)2026-06-25 19:00:24,080:finished processing per sample fasta files
+INFO(134946494707520)2026-06-25 19:00:24,080:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159221_39_L001_R1_001.fastq.gz finished
+INFO(133086315116352)2026-06-25 19:00:25,034:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159209_27_L001_R1_001.fastq.gz.trim
+INFO(133086315116352)2026-06-25 19:00:25,086:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159209_27_L001_R1_001.fastq.gz.trim.derep
+INFO(126893292975936)2026-06-25 19:00:25,157:*************************
+INFO(126893292975936)2026-06-25 19:00:25,157:deblurring started
+WARNING(126893292975936)2026-06-25 19:00:25,158:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159193_11_L001_R1_001.fastq.gz
+WARNING(126893292975936)2026-06-25 19:00:25,158:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159193_11_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(126893292975936)2026-06-25 19:00:25,158:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(126893292975936)2026-06-25 19:00:25,158:deblur worker thread started
+INFO(126893292975936)2026-06-25 19:00:25,158:processing per sample fasta files
+INFO(126893292975936)2026-06-25 19:00:25,158:--------------------------------------------------------
+INFO(126893292975936)2026-06-25 19:00:25,158:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159193_11_L001_R1_001.fastq.gz
+INFO(133086315116352)2026-06-25 19:00:25,572:total sequences 1897, passing sequences 1897, failing sequences 0
+INFO(133086315116352)2026-06-25 19:00:25,572:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159209_27_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(137035204572992)2026-06-25 19:00:26,541:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159213_31_L001_R1_001.fastq.gz.trim
+INFO(137035204572992)2026-06-25 19:00:26,578:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159213_31_L001_R1_001.fastq.gz.trim.derep
+INFO(128751203403584)2026-06-25 19:00:26,863:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159219_37_L001_R1_001.fastq.gz.trim
+INFO(128751203403584)2026-06-25 19:00:26,915:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159219_37_L001_R1_001.fastq.gz.trim.derep
+INFO(137035204572992)2026-06-25 19:00:27,135:total sequences 1315, passing sequences 1315, failing sequences 0
+INFO(137035204572992)2026-06-25 19:00:27,135:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159213_31_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(128751203403584)2026-06-25 19:00:27,459:total sequences 1544, passing sequences 1544, failing sequences 0
+INFO(128751203403584)2026-06-25 19:00:27,460:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159219_37_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(126893292975936)2026-06-25 19:00:29,765:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159193_11_L001_R1_001.fastq.gz.trim
+INFO(126893292975936)2026-06-25 19:00:29,808:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159193_11_L001_R1_001.fastq.gz.trim.derep
+INFO(126893292975936)2026-06-25 19:00:30,285:total sequences 1201, passing sequences 1201, failing sequences 0
+INFO(126893292975936)2026-06-25 19:00:30,285:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159193_11_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(137035204572992)2026-06-25 19:00:31,544:deblurring 1315 sequences
+INFO(128751203403584)2026-06-25 19:00:32,519:deblurring 1544 sequences
+INFO(133086315116352)2026-06-25 19:00:32,658:deblurring 1897 sequences
+INFO(137035204572992)2026-06-25 19:00:32,707:526 unique sequences left following deblurring
+INFO(137035204572992)2026-06-25 19:00:32,710:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159213_31_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(137035204572992)2026-06-25 19:00:33,222:finished processing file
+INFO(137035204572992)2026-06-25 19:00:33,223:finished processing per sample fasta files
+INFO(137035204572992)2026-06-25 19:00:33,223:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159213_31_L001_R1_001.fastq.gz finished
+INFO(126893292975936)2026-06-25 19:00:34,107:deblurring 1201 sequences
+INFO(128751203403584)2026-06-25 19:00:34,178:629 unique sequences left following deblurring
+INFO(128751203403584)2026-06-25 19:00:34,181:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159219_37_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(137594687219520)2026-06-25 19:00:34,323:*************************
+INFO(137594687219520)2026-06-25 19:00:34,324:deblurring started
+WARNING(137594687219520)2026-06-25 19:00:34,324:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159202_20_L001_R1_001.fastq.gz
+WARNING(137594687219520)2026-06-25 19:00:34,324:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159202_20_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(137594687219520)2026-06-25 19:00:34,324:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(137594687219520)2026-06-25 19:00:34,324:deblur worker thread started
+INFO(137594687219520)2026-06-25 19:00:34,324:processing per sample fasta files
+INFO(137594687219520)2026-06-25 19:00:34,324:--------------------------------------------------------
+INFO(137594687219520)2026-06-25 19:00:34,324:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159202_20_L001_R1_001.fastq.gz
+INFO(128751203403584)2026-06-25 19:00:34,883:finished processing file
+INFO(128751203403584)2026-06-25 19:00:34,884:finished processing per sample fasta files
+INFO(128751203403584)2026-06-25 19:00:34,884:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159219_37_L001_R1_001.fastq.gz finished
+INFO(126893292975936)2026-06-25 19:00:35,343:574 unique sequences left following deblurring
+INFO(126893292975936)2026-06-25 19:00:35,349:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159193_11_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(133086315116352)2026-06-25 19:00:35,821:1006 unique sequences left following deblurring
+INFO(133086315116352)2026-06-25 19:00:35,826:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159209_27_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(126893292975936)2026-06-25 19:00:35,992:finished processing file
+INFO(126893292975936)2026-06-25 19:00:35,992:finished processing per sample fasta files
+INFO(126893292975936)2026-06-25 19:00:35,992:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159193_11_L001_R1_001.fastq.gz finished
+INFO(127840871077696)2026-06-25 19:00:36,046:*************************
+INFO(127840871077696)2026-06-25 19:00:36,046:deblurring started
+WARNING(127840871077696)2026-06-25 19:00:36,047:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159207_25_L001_R1_001.fastq.gz
+WARNING(127840871077696)2026-06-25 19:00:36,047:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159207_25_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(127840871077696)2026-06-25 19:00:36,047:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127840871077696)2026-06-25 19:00:36,047:deblur worker thread started
+INFO(127840871077696)2026-06-25 19:00:36,047:processing per sample fasta files
+INFO(127840871077696)2026-06-25 19:00:36,047:--------------------------------------------------------
+INFO(127840871077696)2026-06-25 19:00:36,047:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159207_25_L001_R1_001.fastq.gz
+INFO(133086315116352)2026-06-25 19:00:36,982:finished processing file
+INFO(133086315116352)2026-06-25 19:00:36,983:finished processing per sample fasta files
+INFO(133086315116352)2026-06-25 19:00:36,983:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159209_27_L001_R1_001.fastq.gz finished
+INFO(137907013760832)2026-06-25 19:00:37,041:*************************
+INFO(137907013760832)2026-06-25 19:00:37,041:deblurring started
+WARNING(137907013760832)2026-06-25 19:00:37,042:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159183_1_L001_R1_001.fastq.gz
+WARNING(137907013760832)2026-06-25 19:00:37,042:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159183_1_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(137907013760832)2026-06-25 19:00:37,042:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(137907013760832)2026-06-25 19:00:37,042:deblur worker thread started
+INFO(137907013760832)2026-06-25 19:00:37,042:processing per sample fasta files
+INFO(137907013760832)2026-06-25 19:00:37,042:--------------------------------------------------------
+INFO(137907013760832)2026-06-25 19:00:37,042:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159183_1_L001_R1_001.fastq.gz
+INFO(132219957905216)2026-06-25 19:00:38,025:*************************
+INFO(132219957905216)2026-06-25 19:00:38,025:deblurring started
+WARNING(132219957905216)2026-06-25 19:00:38,025:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159216_34_L001_R1_001.fastq.gz
+WARNING(132219957905216)2026-06-25 19:00:38,025:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159216_34_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(132219957905216)2026-06-25 19:00:38,025:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(132219957905216)2026-06-25 19:00:38,025:deblur worker thread started
+INFO(132219957905216)2026-06-25 19:00:38,025:processing per sample fasta files
+INFO(132219957905216)2026-06-25 19:00:38,025:--------------------------------------------------------
+INFO(132219957905216)2026-06-25 19:00:38,025:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159216_34_L001_R1_001.fastq.gz
+INFO(137594687219520)2026-06-25 19:00:39,148:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159202_20_L001_R1_001.fastq.gz.trim
+INFO(137594687219520)2026-06-25 19:00:39,186:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159202_20_L001_R1_001.fastq.gz.trim.derep
+INFO(137594687219520)2026-06-25 19:00:39,633:total sequences 1396, passing sequences 1396, failing sequences 0
+INFO(137594687219520)2026-06-25 19:00:39,633:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159202_20_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127840871077696)2026-06-25 19:00:40,860:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159207_25_L001_R1_001.fastq.gz.trim
+INFO(127840871077696)2026-06-25 19:00:40,902:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159207_25_L001_R1_001.fastq.gz.trim.derep
+INFO(137907013760832)2026-06-25 19:00:41,115:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159183_1_L001_R1_001.fastq.gz.trim
+INFO(137907013760832)2026-06-25 19:00:41,158:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159183_1_L001_R1_001.fastq.gz.trim.derep
+INFO(127840871077696)2026-06-25 19:00:41,420:total sequences 1533, passing sequences 1533, failing sequences 0
+INFO(127840871077696)2026-06-25 19:00:41,420:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159207_25_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(137907013760832)2026-06-25 19:00:41,631:total sequences 1187, passing sequences 1187, failing sequences 0
+INFO(137907013760832)2026-06-25 19:00:41,632:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159183_1_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(132219957905216)2026-06-25 19:00:42,567:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159216_34_L001_R1_001.fastq.gz.trim
+INFO(132219957905216)2026-06-25 19:00:42,614:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159216_34_L001_R1_001.fastq.gz.trim.derep
+INFO(132219957905216)2026-06-25 19:00:43,096:total sequences 1470, passing sequences 1470, failing sequences 0
+INFO(132219957905216)2026-06-25 19:00:43,096:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159216_34_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(137594687219520)2026-06-25 19:00:44,025:deblurring 1396 sequences
+INFO(137594687219520)2026-06-25 19:00:44,949:395 unique sequences left following deblurring
+INFO(137594687219520)2026-06-25 19:00:44,952:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159202_20_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(137594687219520)2026-06-25 19:00:45,379:finished processing file
+INFO(137594687219520)2026-06-25 19:00:45,379:finished processing per sample fasta files
+INFO(137594687219520)2026-06-25 19:00:45,379:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159202_20_L001_R1_001.fastq.gz finished
+INFO(137907013760832)2026-06-25 19:00:45,397:deblurring 1187 sequences
+INFO(137907013760832)2026-06-25 19:00:46,032:333 unique sequences left following deblurring
+INFO(137907013760832)2026-06-25 19:00:46,034:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159183_1_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(137907013760832)2026-06-25 19:00:46,382:finished processing file
+INFO(137907013760832)2026-06-25 19:00:46,382:finished processing per sample fasta files
+INFO(137907013760832)2026-06-25 19:00:46,382:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159183_1_L001_R1_001.fastq.gz finished
+INFO(127415647295296)2026-06-25 19:00:46,453:*************************
+INFO(127415647295296)2026-06-25 19:00:46,453:deblurring started
+WARNING(127415647295296)2026-06-25 19:00:46,453:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159206_24_L001_R1_001.fastq.gz
+WARNING(127415647295296)2026-06-25 19:00:46,453:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159206_24_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(127415647295296)2026-06-25 19:00:46,453:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127415647295296)2026-06-25 19:00:46,453:deblur worker thread started
+INFO(127415647295296)2026-06-25 19:00:46,453:processing per sample fasta files
+INFO(127415647295296)2026-06-25 19:00:46,454:--------------------------------------------------------
+INFO(127415647295296)2026-06-25 19:00:46,454:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159206_24_L001_R1_001.fastq.gz
+INFO(127840871077696)2026-06-25 19:00:46,614:deblurring 1533 sequences
+INFO(125968026908480)2026-06-25 19:00:47,445:*************************
+INFO(125968026908480)2026-06-25 19:00:47,445:deblurring started
+WARNING(125968026908480)2026-06-25 19:00:47,446:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159198_16_L001_R1_001.fastq.gz
+WARNING(125968026908480)2026-06-25 19:00:47,446:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159198_16_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(125968026908480)2026-06-25 19:00:47,446:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(125968026908480)2026-06-25 19:00:47,446:deblur worker thread started
+INFO(125968026908480)2026-06-25 19:00:47,446:processing per sample fasta files
+INFO(125968026908480)2026-06-25 19:00:47,446:--------------------------------------------------------
+INFO(125968026908480)2026-06-25 19:00:47,446:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159198_16_L001_R1_001.fastq.gz
+INFO(132219957905216)2026-06-25 19:00:48,147:deblurring 1470 sequences
+INFO(127840871077696)2026-06-25 19:00:48,389:638 unique sequences left following deblurring
+INFO(127840871077696)2026-06-25 19:00:48,394:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159207_25_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(127840871077696)2026-06-25 19:00:49,052:finished processing file
+INFO(127840871077696)2026-06-25 19:00:49,053:finished processing per sample fasta files
+INFO(127840871077696)2026-06-25 19:00:49,053:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159207_25_L001_R1_001.fastq.gz finished
+INFO(132219957905216)2026-06-25 19:00:49,396:469 unique sequences left following deblurring
+INFO(132219957905216)2026-06-25 19:00:49,399:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159216_34_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(132219957905216)2026-06-25 19:00:49,824:finished processing file
+INFO(132219957905216)2026-06-25 19:00:49,824:finished processing per sample fasta files
+INFO(132219957905216)2026-06-25 19:00:49,824:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159216_34_L001_R1_001.fastq.gz finished
+INFO(131512113280832)2026-06-25 19:00:50,173:*************************
+INFO(131512113280832)2026-06-25 19:00:50,173:deblurring started
+WARNING(131512113280832)2026-06-25 19:00:50,173:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159201_19_L001_R1_001.fastq.gz
+WARNING(131512113280832)2026-06-25 19:00:50,173:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159201_19_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(131512113280832)2026-06-25 19:00:50,173:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(131512113280832)2026-06-25 19:00:50,174:deblur worker thread started
+INFO(131512113280832)2026-06-25 19:00:50,174:processing per sample fasta files
+INFO(131512113280832)2026-06-25 19:00:50,174:--------------------------------------------------------
+INFO(131512113280832)2026-06-25 19:00:50,174:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159201_19_L001_R1_001.fastq.gz
+INFO(127627011712832)2026-06-25 19:00:50,902:*************************
+INFO(127627011712832)2026-06-25 19:00:50,902:deblurring started
+WARNING(127627011712832)2026-06-25 19:00:50,902:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159220_38_L001_R1_001.fastq.gz
+WARNING(127627011712832)2026-06-25 19:00:50,902:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159220_38_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(127627011712832)2026-06-25 19:00:50,902:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127627011712832)2026-06-25 19:00:50,902:deblur worker thread started
+INFO(127627011712832)2026-06-25 19:00:50,902:processing per sample fasta files
+INFO(127627011712832)2026-06-25 19:00:50,902:--------------------------------------------------------
+INFO(127627011712832)2026-06-25 19:00:50,902:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159220_38_L001_R1_001.fastq.gz
+INFO(127415647295296)2026-06-25 19:00:51,103:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159206_24_L001_R1_001.fastq.gz.trim
+INFO(127415647295296)2026-06-25 19:00:51,143:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159206_24_L001_R1_001.fastq.gz.trim.derep
+INFO(127415647295296)2026-06-25 19:00:51,622:total sequences 1340, passing sequences 1340, failing sequences 0
+INFO(127415647295296)2026-06-25 19:00:51,623:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159206_24_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(125968026908480)2026-06-25 19:00:53,193:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159198_16_L001_R1_001.fastq.gz.trim
+INFO(125968026908480)2026-06-25 19:00:53,237:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159198_16_L001_R1_001.fastq.gz.trim.derep
+INFO(125968026908480)2026-06-25 19:00:53,834:total sequences 1768, passing sequences 1768, failing sequences 0
+INFO(125968026908480)2026-06-25 19:00:53,834:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159198_16_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(131512113280832)2026-06-25 19:00:54,872:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159201_19_L001_R1_001.fastq.gz.trim
+INFO(131512113280832)2026-06-25 19:00:54,908:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159201_19_L001_R1_001.fastq.gz.trim.derep
+INFO(131512113280832)2026-06-25 19:00:55,445:total sequences 1323, passing sequences 1323, failing sequences 0
+INFO(131512113280832)2026-06-25 19:00:55,446:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159201_19_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127415647295296)2026-06-25 19:00:55,851:deblurring 1340 sequences
+INFO(127627011712832)2026-06-25 19:00:56,671:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159220_38_L001_R1_001.fastq.gz.trim
+INFO(127627011712832)2026-06-25 19:00:56,751:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159220_38_L001_R1_001.fastq.gz.trim.derep
+INFO(127415647295296)2026-06-25 19:00:56,880:410 unique sequences left following deblurring
+INFO(127415647295296)2026-06-25 19:00:56,883:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159206_24_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(127415647295296)2026-06-25 19:00:57,274:finished processing file
+INFO(127415647295296)2026-06-25 19:00:57,274:finished processing per sample fasta files
+INFO(127415647295296)2026-06-25 19:00:57,274:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159206_24_L001_R1_001.fastq.gz finished
+INFO(127627011712832)2026-06-25 19:00:57,314:total sequences 1758, passing sequences 1758, failing sequences 0
+INFO(127627011712832)2026-06-25 19:00:57,314:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159220_38_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(133859826255680)2026-06-25 19:00:58,257:*************************
+INFO(133859826255680)2026-06-25 19:00:58,257:deblurring started
+WARNING(133859826255680)2026-06-25 19:00:58,257:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159204_22_L001_R1_001.fastq.gz
+WARNING(133859826255680)2026-06-25 19:00:58,257:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159204_22_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(133859826255680)2026-06-25 19:00:58,257:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(133859826255680)2026-06-25 19:00:58,257:deblur worker thread started
+INFO(133859826255680)2026-06-25 19:00:58,257:processing per sample fasta files
+INFO(133859826255680)2026-06-25 19:00:58,257:--------------------------------------------------------
+INFO(133859826255680)2026-06-25 19:00:58,257:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159204_22_L001_R1_001.fastq.gz
+INFO(131512113280832)2026-06-25 19:00:59,787:deblurring 1323 sequences
+INFO(125968026908480)2026-06-25 19:01:00,536:deblurring 1768 sequences
+INFO(131512113280832)2026-06-25 19:01:00,622:348 unique sequences left following deblurring
+INFO(131512113280832)2026-06-25 19:01:00,625:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159201_19_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(131512113280832)2026-06-25 19:01:00,970:finished processing file
+INFO(131512113280832)2026-06-25 19:01:00,970:finished processing per sample fasta files
+INFO(131512113280832)2026-06-25 19:01:00,970:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159201_19_L001_R1_001.fastq.gz finished
+INFO(131742981629760)2026-06-25 19:01:02,022:*************************
+INFO(131742981629760)2026-06-25 19:01:02,023:deblurring started
+WARNING(131742981629760)2026-06-25 19:01:02,023:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159191_9_L001_R1_001.fastq.gz
+WARNING(131742981629760)2026-06-25 19:01:02,023:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159191_9_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(131742981629760)2026-06-25 19:01:02,023:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(131742981629760)2026-06-25 19:01:02,023:deblur worker thread started
+INFO(131742981629760)2026-06-25 19:01:02,023:processing per sample fasta files
+INFO(131742981629760)2026-06-25 19:01:02,023:--------------------------------------------------------
+INFO(131742981629760)2026-06-25 19:01:02,023:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159191_9_L001_R1_001.fastq.gz
+INFO(133859826255680)2026-06-25 19:01:02,042:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159204_22_L001_R1_001.fastq.gz.trim
+INFO(133859826255680)2026-06-25 19:01:02,078:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159204_22_L001_R1_001.fastq.gz.trim.derep
+INFO(125968026908480)2026-06-25 19:01:02,379:656 unique sequences left following deblurring
+INFO(125968026908480)2026-06-25 19:01:02,383:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159198_16_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(133859826255680)2026-06-25 19:01:02,606:total sequences 1161, passing sequences 1161, failing sequences 0
+INFO(133859826255680)2026-06-25 19:01:02,606:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159204_22_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(125968026908480)2026-06-25 19:01:03,058:finished processing file
+INFO(125968026908480)2026-06-25 19:01:03,058:finished processing per sample fasta files
+INFO(125968026908480)2026-06-25 19:01:03,058:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159198_16_L001_R1_001.fastq.gz finished
+INFO(127627011712832)2026-06-25 19:01:03,444:deblurring 1758 sequences
+INFO(127150696597312)2026-06-25 19:01:04,094:*************************
+INFO(127150696597312)2026-06-25 19:01:04,094:deblurring started
+WARNING(127150696597312)2026-06-25 19:01:04,095:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159189_7_L001_R1_001.fastq.gz
+WARNING(127150696597312)2026-06-25 19:01:04,095:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159189_7_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(127150696597312)2026-06-25 19:01:04,095:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127150696597312)2026-06-25 19:01:04,095:deblur worker thread started
+INFO(127150696597312)2026-06-25 19:01:04,095:processing per sample fasta files
+INFO(127150696597312)2026-06-25 19:01:04,095:--------------------------------------------------------
+INFO(127150696597312)2026-06-25 19:01:04,095:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159189_7_L001_R1_001.fastq.gz
+INFO(127627011712832)2026-06-25 19:01:05,638:819 unique sequences left following deblurring
+INFO(127627011712832)2026-06-25 19:01:05,642:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159220_38_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(133859826255680)2026-06-25 19:01:06,242:deblurring 1161 sequences
+INFO(127627011712832)2026-06-25 19:01:06,512:finished processing file
+INFO(127627011712832)2026-06-25 19:01:06,512:finished processing per sample fasta files
+INFO(127627011712832)2026-06-25 19:01:06,512:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159220_38_L001_R1_001.fastq.gz finished
+INFO(133859826255680)2026-06-25 19:01:06,992:354 unique sequences left following deblurring
+INFO(133859826255680)2026-06-25 19:01:06,995:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159204_22_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(133859826255680)2026-06-25 19:01:07,354:finished processing file
+INFO(133859826255680)2026-06-25 19:01:07,354:finished processing per sample fasta files
+INFO(133859826255680)2026-06-25 19:01:07,354:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159204_22_L001_R1_001.fastq.gz finished
+INFO(131742981629760)2026-06-25 19:01:07,515:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159191_9_L001_R1_001.fastq.gz.trim
+INFO(131742981629760)2026-06-25 19:01:07,557:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159191_9_L001_R1_001.fastq.gz.trim.derep
+INFO(133011026274112)2026-06-25 19:01:07,702:*************************
+INFO(133011026274112)2026-06-25 19:01:07,702:deblurring started
+WARNING(133011026274112)2026-06-25 19:01:07,702:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159214_32_L001_R1_001.fastq.gz
+WARNING(133011026274112)2026-06-25 19:01:07,703:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159214_32_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(133011026274112)2026-06-25 19:01:07,703:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(133011026274112)2026-06-25 19:01:07,703:deblur worker thread started
+INFO(133011026274112)2026-06-25 19:01:07,703:processing per sample fasta files
+INFO(133011026274112)2026-06-25 19:01:07,703:--------------------------------------------------------
+INFO(133011026274112)2026-06-25 19:01:07,703:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159214_32_L001_R1_001.fastq.gz
+INFO(131742981629760)2026-06-25 19:01:08,095:total sequences 1721, passing sequences 1721, failing sequences 0
+INFO(131742981629760)2026-06-25 19:01:08,095:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159191_9_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(132891631871808)2026-06-25 19:01:08,514:*************************
+INFO(132891631871808)2026-06-25 19:01:08,514:deblurring started
+WARNING(132891631871808)2026-06-25 19:01:08,514:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159186_4_L001_R1_001.fastq.gz
+WARNING(132891631871808)2026-06-25 19:01:08,514:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159186_4_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(132891631871808)2026-06-25 19:01:08,514:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(132891631871808)2026-06-25 19:01:08,515:deblur worker thread started
+INFO(132891631871808)2026-06-25 19:01:08,515:processing per sample fasta files
+INFO(132891631871808)2026-06-25 19:01:08,515:--------------------------------------------------------
+INFO(132891631871808)2026-06-25 19:01:08,515:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159186_4_L001_R1_001.fastq.gz
+INFO(127150696597312)2026-06-25 19:01:09,824:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159189_7_L001_R1_001.fastq.gz.trim
+INFO(127150696597312)2026-06-25 19:01:09,878:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159189_7_L001_R1_001.fastq.gz.trim.derep
+INFO(127150696597312)2026-06-25 19:01:10,406:total sequences 1598, passing sequences 1598, failing sequences 0
+INFO(127150696597312)2026-06-25 19:01:10,406:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159189_7_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(133011026274112)2026-06-25 19:01:13,219:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159214_32_L001_R1_001.fastq.gz.trim
+INFO(133011026274112)2026-06-25 19:01:13,264:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159214_32_L001_R1_001.fastq.gz.trim.derep
+INFO(132891631871808)2026-06-25 19:01:13,715:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159186_4_L001_R1_001.fastq.gz.trim
+INFO(132891631871808)2026-06-25 19:01:13,768:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159186_4_L001_R1_001.fastq.gz.trim.derep
+INFO(133011026274112)2026-06-25 19:01:13,823:total sequences 1457, passing sequences 1457, failing sequences 0
+INFO(133011026274112)2026-06-25 19:01:13,823:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159214_32_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(131742981629760)2026-06-25 19:01:14,214:deblurring 1721 sequences
+INFO(132891631871808)2026-06-25 19:01:14,307:total sequences 1427, passing sequences 1427, failing sequences 0
+INFO(132891631871808)2026-06-25 19:01:14,307:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159186_4_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127150696597312)2026-06-25 19:01:15,959:deblurring 1598 sequences
+INFO(131742981629760)2026-06-25 19:01:16,666:842 unique sequences left following deblurring
+INFO(131742981629760)2026-06-25 19:01:16,670:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159191_9_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(131742981629760)2026-06-25 19:01:17,505:finished processing file
+INFO(131742981629760)2026-06-25 19:01:17,506:finished processing per sample fasta files
+INFO(131742981629760)2026-06-25 19:01:17,506:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159191_9_L001_R1_001.fastq.gz finished
+INFO(127150696597312)2026-06-25 19:01:17,841:689 unique sequences left following deblurring
+INFO(127150696597312)2026-06-25 19:01:17,846:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159189_7_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(133011026274112)2026-06-25 19:01:18,523:deblurring 1457 sequences
+INFO(131056608360256)2026-06-25 19:01:18,534:*************************
+INFO(131056608360256)2026-06-25 19:01:18,534:deblurring started
+WARNING(131056608360256)2026-06-25 19:01:18,534:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159188_6_L001_R1_001.fastq.gz
+WARNING(131056608360256)2026-06-25 19:01:18,534:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159188_6_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(131056608360256)2026-06-25 19:01:18,534:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(131056608360256)2026-06-25 19:01:18,535:deblur worker thread started
+INFO(131056608360256)2026-06-25 19:01:18,535:processing per sample fasta files
+INFO(131056608360256)2026-06-25 19:01:18,535:--------------------------------------------------------
+INFO(131056608360256)2026-06-25 19:01:18,535:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159188_6_L001_R1_001.fastq.gz
+INFO(127150696597312)2026-06-25 19:01:18,673:finished processing file
+INFO(127150696597312)2026-06-25 19:01:18,673:finished processing per sample fasta files
+INFO(127150696597312)2026-06-25 19:01:18,673:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159189_7_L001_R1_001.fastq.gz finished
+INFO(132891631871808)2026-06-25 19:01:19,207:deblurring 1427 sequences
+INFO(127405144041280)2026-06-25 19:01:19,765:*************************
+INFO(127405144041280)2026-06-25 19:01:19,765:deblurring started
+WARNING(127405144041280)2026-06-25 19:01:19,765:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159203_21_L001_R1_001.fastq.gz
+WARNING(127405144041280)2026-06-25 19:01:19,765:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159203_21_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(127405144041280)2026-06-25 19:01:19,765:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127405144041280)2026-06-25 19:01:19,765:deblur worker thread started
+INFO(127405144041280)2026-06-25 19:01:19,765:processing per sample fasta files
+INFO(127405144041280)2026-06-25 19:01:19,765:--------------------------------------------------------
+INFO(127405144041280)2026-06-25 19:01:19,765:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159203_21_L001_R1_001.fastq.gz
+INFO(133011026274112)2026-06-25 19:01:20,300:679 unique sequences left following deblurring
+INFO(133011026274112)2026-06-25 19:01:20,303:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159214_32_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(132891631871808)2026-06-25 19:01:20,466:480 unique sequences left following deblurring
+INFO(132891631871808)2026-06-25 19:01:20,470:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159186_4_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(132891631871808)2026-06-25 19:01:21,007:finished processing file
+INFO(132891631871808)2026-06-25 19:01:21,008:finished processing per sample fasta files
+INFO(132891631871808)2026-06-25 19:01:21,008:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159186_4_L001_R1_001.fastq.gz finished
+INFO(133011026274112)2026-06-25 19:01:21,085:finished processing file
+INFO(133011026274112)2026-06-25 19:01:21,086:finished processing per sample fasta files
+INFO(133011026274112)2026-06-25 19:01:21,086:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159214_32_L001_R1_001.fastq.gz finished
+INFO(136306946856768)2026-06-25 19:01:22,131:*************************
+INFO(136306946856768)2026-06-25 19:01:22,131:deblurring started
+WARNING(136306946856768)2026-06-25 19:01:22,132:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159195_13_L001_R1_001.fastq.gz
+WARNING(136306946856768)2026-06-25 19:01:22,132:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159195_13_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(136306946856768)2026-06-25 19:01:22,132:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(136306946856768)2026-06-25 19:01:22,132:deblur worker thread started
+INFO(136306946856768)2026-06-25 19:01:22,132:processing per sample fasta files
+INFO(136306946856768)2026-06-25 19:01:22,132:--------------------------------------------------------
+INFO(136306946856768)2026-06-25 19:01:22,132:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159195_13_L001_R1_001.fastq.gz
+INFO(135513339811648)2026-06-25 19:01:22,217:*************************
+INFO(135513339811648)2026-06-25 19:01:22,217:deblurring started
+WARNING(135513339811648)2026-06-25 19:01:22,218:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159218_36_L001_R1_001.fastq.gz
+WARNING(135513339811648)2026-06-25 19:01:22,218:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159218_36_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(135513339811648)2026-06-25 19:01:22,218:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(135513339811648)2026-06-25 19:01:22,218:deblur worker thread started
+INFO(135513339811648)2026-06-25 19:01:22,218:processing per sample fasta files
+INFO(135513339811648)2026-06-25 19:01:22,218:--------------------------------------------------------
+INFO(135513339811648)2026-06-25 19:01:22,218:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159218_36_L001_R1_001.fastq.gz
+INFO(131056608360256)2026-06-25 19:01:23,808:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159188_6_L001_R1_001.fastq.gz.trim
+INFO(131056608360256)2026-06-25 19:01:23,852:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159188_6_L001_R1_001.fastq.gz.trim.derep
+INFO(131056608360256)2026-06-25 19:01:24,407:total sequences 1640, passing sequences 1640, failing sequences 0
+INFO(131056608360256)2026-06-25 19:01:24,407:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159188_6_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127405144041280)2026-06-25 19:01:24,799:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159203_21_L001_R1_001.fastq.gz.trim
+INFO(127405144041280)2026-06-25 19:01:24,837:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159203_21_L001_R1_001.fastq.gz.trim.derep
+INFO(127405144041280)2026-06-25 19:01:25,285:total sequences 1446, passing sequences 1446, failing sequences 0
+INFO(127405144041280)2026-06-25 19:01:25,285:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159203_21_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(135513339811648)2026-06-25 19:01:26,661:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159218_36_L001_R1_001.fastq.gz.trim
+INFO(135513339811648)2026-06-25 19:01:26,697:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159218_36_L001_R1_001.fastq.gz.trim.derep
+INFO(136306946856768)2026-06-25 19:01:27,184:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159195_13_L001_R1_001.fastq.gz.trim
+INFO(136306946856768)2026-06-25 19:01:27,248:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159195_13_L001_R1_001.fastq.gz.trim.derep
+INFO(135513339811648)2026-06-25 19:01:27,261:total sequences 1202, passing sequences 1202, failing sequences 0
+INFO(135513339811648)2026-06-25 19:01:27,262:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159218_36_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(136306946856768)2026-06-25 19:01:27,762:total sequences 1422, passing sequences 1422, failing sequences 0
+INFO(136306946856768)2026-06-25 19:01:27,762:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159195_13_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127405144041280)2026-06-25 19:01:29,869:deblurring 1446 sequences
+INFO(131056608360256)2026-06-25 19:01:30,258:deblurring 1640 sequences
+INFO(127405144041280)2026-06-25 19:01:30,929:500 unique sequences left following deblurring
+INFO(127405144041280)2026-06-25 19:01:30,933:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159203_21_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(135513339811648)2026-06-25 19:01:31,008:deblurring 1202 sequences
+INFO(127405144041280)2026-06-25 19:01:31,419:finished processing file
+INFO(127405144041280)2026-06-25 19:01:31,419:finished processing per sample fasta files
+INFO(127405144041280)2026-06-25 19:01:31,419:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159203_21_L001_R1_001.fastq.gz finished
+INFO(135513339811648)2026-06-25 19:01:31,680:315 unique sequences left following deblurring
+INFO(135513339811648)2026-06-25 19:01:31,682:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159218_36_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(135513339811648)2026-06-25 19:01:32,072:finished processing file
+INFO(135513339811648)2026-06-25 19:01:32,072:finished processing per sample fasta files
+INFO(135513339811648)2026-06-25 19:01:32,072:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159218_36_L001_R1_001.fastq.gz finished
+INFO(131056608360256)2026-06-25 19:01:32,121:657 unique sequences left following deblurring
+INFO(131056608360256)2026-06-25 19:01:32,126:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159188_6_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(136306946856768)2026-06-25 19:01:32,469:deblurring 1422 sequences
+INFO(134306472924992)2026-06-25 19:01:32,478:*************************
+INFO(134306472924992)2026-06-25 19:01:32,478:deblurring started
+WARNING(134306472924992)2026-06-25 19:01:32,478:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159211_29_L001_R1_001.fastq.gz
+WARNING(134306472924992)2026-06-25 19:01:32,478:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159211_29_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(134306472924992)2026-06-25 19:01:32,479:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(134306472924992)2026-06-25 19:01:32,479:deblur worker thread started
+INFO(134306472924992)2026-06-25 19:01:32,479:processing per sample fasta files
+INFO(134306472924992)2026-06-25 19:01:32,479:--------------------------------------------------------
+INFO(134306472924992)2026-06-25 19:01:32,479:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159211_29_L001_R1_001.fastq.gz
+INFO(131056608360256)2026-06-25 19:01:32,894:finished processing file
+INFO(131056608360256)2026-06-25 19:01:32,894:finished processing per sample fasta files
+INFO(131056608360256)2026-06-25 19:01:32,894:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159188_6_L001_R1_001.fastq.gz finished
+INFO(127461860624192)2026-06-25 19:01:33,222:*************************
+INFO(127461860624192)2026-06-25 19:01:33,222:deblurring started
+WARNING(127461860624192)2026-06-25 19:01:33,222:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159208_26_L001_R1_001.fastq.gz
+WARNING(127461860624192)2026-06-25 19:01:33,223:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159208_26_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(127461860624192)2026-06-25 19:01:33,223:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127461860624192)2026-06-25 19:01:33,223:deblur worker thread started
+INFO(127461860624192)2026-06-25 19:01:33,223:processing per sample fasta files
+INFO(127461860624192)2026-06-25 19:01:33,223:--------------------------------------------------------
+INFO(127461860624192)2026-06-25 19:01:33,223:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159208_26_L001_R1_001.fastq.gz
+INFO(124576310052672)2026-06-25 19:01:33,926:*************************
+INFO(124576310052672)2026-06-25 19:01:33,926:deblurring started
+WARNING(124576310052672)2026-06-25 19:01:33,927:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159197_15_L001_R1_001.fastq.gz
+WARNING(124576310052672)2026-06-25 19:01:33,927:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159197_15_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(124576310052672)2026-06-25 19:01:33,927:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(124576310052672)2026-06-25 19:01:33,927:deblur worker thread started
+INFO(124576310052672)2026-06-25 19:01:33,927:processing per sample fasta files
+INFO(124576310052672)2026-06-25 19:01:33,927:--------------------------------------------------------
+INFO(124576310052672)2026-06-25 19:01:33,927:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159197_15_L001_R1_001.fastq.gz
+INFO(136306946856768)2026-06-25 19:01:34,134:672 unique sequences left following deblurring
+INFO(136306946856768)2026-06-25 19:01:34,137:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159195_13_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(136306946856768)2026-06-25 19:01:34,759:finished processing file
+INFO(136306946856768)2026-06-25 19:01:34,760:finished processing per sample fasta files
+INFO(136306946856768)2026-06-25 19:01:34,761:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159195_13_L001_R1_001.fastq.gz finished
+INFO(126038956795712)2026-06-25 19:01:35,772:*************************
+INFO(126038956795712)2026-06-25 19:01:35,773:deblurring started
+WARNING(126038956795712)2026-06-25 19:01:35,773:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159182_0_L001_R1_001.fastq.gz
+WARNING(126038956795712)2026-06-25 19:01:35,773:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159182_0_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(126038956795712)2026-06-25 19:01:35,773:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(126038956795712)2026-06-25 19:01:35,773:deblur worker thread started
+INFO(126038956795712)2026-06-25 19:01:35,773:processing per sample fasta files
+INFO(126038956795712)2026-06-25 19:01:35,773:--------------------------------------------------------
+INFO(126038956795712)2026-06-25 19:01:35,773:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159182_0_L001_R1_001.fastq.gz
+INFO(134306472924992)2026-06-25 19:01:37,285:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159211_29_L001_R1_001.fastq.gz.trim
+INFO(134306472924992)2026-06-25 19:01:37,339:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159211_29_L001_R1_001.fastq.gz.trim.derep
+INFO(134306472924992)2026-06-25 19:01:37,845:total sequences 1439, passing sequences 1439, failing sequences 0
+INFO(134306472924992)2026-06-25 19:01:37,845:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159211_29_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127461860624192)2026-06-25 19:01:38,931:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159208_26_L001_R1_001.fastq.gz.trim
+INFO(127461860624192)2026-06-25 19:01:38,989:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159208_26_L001_R1_001.fastq.gz.trim.derep
+INFO(124576310052672)2026-06-25 19:01:39,475:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159197_15_L001_R1_001.fastq.gz.trim
+INFO(127461860624192)2026-06-25 19:01:39,489:total sequences 1624, passing sequences 1624, failing sequences 0
+INFO(127461860624192)2026-06-25 19:01:39,489:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159208_26_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(124576310052672)2026-06-25 19:01:39,524:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159197_15_L001_R1_001.fastq.gz.trim.derep
+INFO(126038956795712)2026-06-25 19:01:39,905:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159182_0_L001_R1_001.fastq.gz.trim
+INFO(126038956795712)2026-06-25 19:01:39,940:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159182_0_L001_R1_001.fastq.gz.trim.derep
+INFO(124576310052672)2026-06-25 19:01:40,069:total sequences 1754, passing sequences 1754, failing sequences 0
+INFO(124576310052672)2026-06-25 19:01:40,069:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159197_15_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(126038956795712)2026-06-25 19:01:40,413:total sequences 1020, passing sequences 1020, failing sequences 0
+INFO(126038956795712)2026-06-25 19:01:40,413:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159182_0_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(134306472924992)2026-06-25 19:01:42,388:deblurring 1439 sequences
+INFO(134306472924992)2026-06-25 19:01:43,426:436 unique sequences left following deblurring
+INFO(134306472924992)2026-06-25 19:01:43,428:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159211_29_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(126038956795712)2026-06-25 19:01:43,562:deblurring 1020 sequences
+INFO(134306472924992)2026-06-25 19:01:43,863:finished processing file
+INFO(134306472924992)2026-06-25 19:01:43,864:finished processing per sample fasta files
+INFO(134306472924992)2026-06-25 19:01:43,864:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159211_29_L001_R1_001.fastq.gz finished
+INFO(126038956795712)2026-06-25 19:01:44,325:412 unique sequences left following deblurring
+INFO(126038956795712)2026-06-25 19:01:44,328:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159182_0_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(126038956795712)2026-06-25 19:01:44,694:finished processing file
+INFO(126038956795712)2026-06-25 19:01:44,694:finished processing per sample fasta files
+INFO(126038956795712)2026-06-25 19:01:44,694:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159182_0_L001_R1_001.fastq.gz finished
+INFO(127108328834880)2026-06-25 19:01:44,864:*************************
+INFO(127108328834880)2026-06-25 19:01:44,864:deblurring started
+WARNING(127108328834880)2026-06-25 19:01:44,865:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159187_5_L001_R1_001.fastq.gz
+WARNING(127108328834880)2026-06-25 19:01:44,865:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159187_5_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(127108328834880)2026-06-25 19:01:44,865:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(127108328834880)2026-06-25 19:01:44,865:deblur worker thread started
+INFO(127108328834880)2026-06-25 19:01:44,865:processing per sample fasta files
+INFO(127108328834880)2026-06-25 19:01:44,865:--------------------------------------------------------
+INFO(127108328834880)2026-06-25 19:01:44,865:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159187_5_L001_R1_001.fastq.gz
+INFO(127461860624192)2026-06-25 19:01:45,233:deblurring 1624 sequences
+INFO(138896588691264)2026-06-25 19:01:45,867:*************************
+INFO(138896588691264)2026-06-25 19:01:45,868:deblurring started
+WARNING(138896588691264)2026-06-25 19:01:45,868:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159199_17_L001_R1_001.fastq.gz
+WARNING(138896588691264)2026-06-25 19:01:45,868:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159199_17_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(138896588691264)2026-06-25 19:01:45,868:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(138896588691264)2026-06-25 19:01:45,868:deblur worker thread started
+INFO(138896588691264)2026-06-25 19:01:45,868:processing per sample fasta files
+INFO(138896588691264)2026-06-25 19:01:45,868:--------------------------------------------------------
+INFO(138896588691264)2026-06-25 19:01:45,868:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159199_17_L001_R1_001.fastq.gz
+INFO(127461860624192)2026-06-25 19:01:46,599:497 unique sequences left following deblurring
+INFO(127461860624192)2026-06-25 19:01:46,611:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159208_26_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(124576310052672)2026-06-25 19:01:46,920:deblurring 1754 sequences
+INFO(127461860624192)2026-06-25 19:01:47,143:finished processing file
+INFO(127461860624192)2026-06-25 19:01:47,143:finished processing per sample fasta files
+INFO(127461860624192)2026-06-25 19:01:47,143:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159208_26_L001_R1_001.fastq.gz finished
+INFO(128875159304000)2026-06-25 19:01:48,249:*************************
+INFO(128875159304000)2026-06-25 19:01:48,249:deblurring started
+WARNING(128875159304000)2026-06-25 19:01:48,249:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159215_33_L001_R1_001.fastq.gz
+WARNING(128875159304000)2026-06-25 19:01:48,250:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159215_33_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(128875159304000)2026-06-25 19:01:48,250:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(128875159304000)2026-06-25 19:01:48,250:deblur worker thread started
+INFO(128875159304000)2026-06-25 19:01:48,250:processing per sample fasta files
+INFO(128875159304000)2026-06-25 19:01:48,250:--------------------------------------------------------
+INFO(128875159304000)2026-06-25 19:01:48,250:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159215_33_L001_R1_001.fastq.gz
+INFO(124576310052672)2026-06-25 19:01:48,341:464 unique sequences left following deblurring
+INFO(124576310052672)2026-06-25 19:01:48,343:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159197_15_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(124576310052672)2026-06-25 19:01:48,753:finished processing file
+INFO(124576310052672)2026-06-25 19:01:48,753:finished processing per sample fasta files
+INFO(124576310052672)2026-06-25 19:01:48,753:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159197_15_L001_R1_001.fastq.gz finished
+INFO(124104318060352)2026-06-25 19:01:49,826:*************************
+INFO(124104318060352)2026-06-25 19:01:49,826:deblurring started
+WARNING(124104318060352)2026-06-25 19:01:49,826:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159217_35_L001_R1_001.fastq.gz
+WARNING(124104318060352)2026-06-25 19:01:49,826:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159217_35_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(124104318060352)2026-06-25 19:01:49,826:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(124104318060352)2026-06-25 19:01:49,826:deblur worker thread started
+INFO(124104318060352)2026-06-25 19:01:49,826:processing per sample fasta files
+INFO(124104318060352)2026-06-25 19:01:49,826:--------------------------------------------------------
+INFO(124104318060352)2026-06-25 19:01:49,826:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159217_35_L001_R1_001.fastq.gz
+INFO(127108328834880)2026-06-25 19:01:50,026:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159187_5_L001_R1_001.fastq.gz.trim
+INFO(127108328834880)2026-06-25 19:01:50,076:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159187_5_L001_R1_001.fastq.gz.trim.derep
+INFO(127108328834880)2026-06-25 19:01:50,568:total sequences 1299, passing sequences 1299, failing sequences 0
+INFO(127108328834880)2026-06-25 19:01:50,568:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159187_5_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(138896588691264)2026-06-25 19:01:51,361:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159199_17_L001_R1_001.fastq.gz.trim
+INFO(138896588691264)2026-06-25 19:01:51,406:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159199_17_L001_R1_001.fastq.gz.trim.derep
+INFO(138896588691264)2026-06-25 19:01:51,863:total sequences 1786, passing sequences 1786, failing sequences 0
+INFO(138896588691264)2026-06-25 19:01:51,863:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159199_17_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127108328834880)2026-06-25 19:01:54,611:deblurring 1299 sequences
+INFO(124104318060352)2026-06-25 19:01:54,738:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159217_35_L001_R1_001.fastq.gz.trim
+INFO(124104318060352)2026-06-25 19:01:54,786:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159217_35_L001_R1_001.fastq.gz.trim.derep
+INFO(124104318060352)2026-06-25 19:01:55,289:total sequences 902, passing sequences 902, failing sequences 0
+INFO(124104318060352)2026-06-25 19:01:55,289:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159217_35_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(127108328834880)2026-06-25 19:01:55,540:430 unique sequences left following deblurring
+INFO(127108328834880)2026-06-25 19:01:55,542:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159187_5_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(127108328834880)2026-06-25 19:01:56,002:finished processing file
+INFO(127108328834880)2026-06-25 19:01:56,002:finished processing per sample fasta files
+INFO(127108328834880)2026-06-25 19:01:56,002:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159187_5_L001_R1_001.fastq.gz finished
+INFO(124684921018176)2026-06-25 19:01:57,025:*************************
+INFO(124684921018176)2026-06-25 19:01:57,025:deblurring started
+WARNING(124684921018176)2026-06-25 19:01:57,025:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159190_8_L001_R1_001.fastq.gz
+WARNING(124684921018176)2026-06-25 19:01:57,026:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159190_8_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(124684921018176)2026-06-25 19:01:57,026:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(124684921018176)2026-06-25 19:01:57,026:deblur worker thread started
+INFO(124684921018176)2026-06-25 19:01:57,026:processing per sample fasta files
+INFO(124684921018176)2026-06-25 19:01:57,026:--------------------------------------------------------
+INFO(124684921018176)2026-06-25 19:01:57,026:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159190_8_L001_R1_001.fastq.gz
+INFO(124104318060352)2026-06-25 19:01:58,112:deblurring 902 sequences
+INFO(138896588691264)2026-06-25 19:01:58,212:deblurring 1786 sequences
+INFO(124104318060352)2026-06-25 19:01:58,575:274 unique sequences left following deblurring
+INFO(124104318060352)2026-06-25 19:01:58,577:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159217_35_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(124104318060352)2026-06-25 19:01:58,808:finished processing file
+INFO(124104318060352)2026-06-25 19:01:58,808:finished processing per sample fasta files
+INFO(124104318060352)2026-06-25 19:01:58,808:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159217_35_L001_R1_001.fastq.gz finished
+INFO(128875159304000)2026-06-25 19:01:59,833:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159215_33_L001_R1_001.fastq.gz.trim
+INFO(128875159304000)2026-06-25 19:01:59,942:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159215_33_L001_R1_001.fastq.gz.trim.derep
+INFO(138896588691264)2026-06-25 19:02:00,131:630 unique sequences left following deblurring
+INFO(138896588691264)2026-06-25 19:02:00,134:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159199_17_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(128875159304000)2026-06-25 19:02:00,520:total sequences 3748, passing sequences 3748, failing sequences 0
+INFO(128875159304000)2026-06-25 19:02:00,520:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159215_33_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(138896588691264)2026-06-25 19:02:00,709:finished processing file
+INFO(138896588691264)2026-06-25 19:02:00,710:finished processing per sample fasta files
+INFO(138896588691264)2026-06-25 19:02:00,710:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159199_17_L001_R1_001.fastq.gz finished
+INFO(124684921018176)2026-06-25 19:02:01,644:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159190_8_L001_R1_001.fastq.gz.trim
+INFO(124684921018176)2026-06-25 19:02:01,681:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159190_8_L001_R1_001.fastq.gz.trim.derep
+INFO(124684921018176)2026-06-25 19:02:02,123:total sequences 1344, passing sequences 1344, failing sequences 0
+INFO(124684921018176)2026-06-25 19:02:02,123:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159190_8_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(124684921018176)2026-06-25 19:02:06,165:deblurring 1344 sequences
+INFO(124684921018176)2026-06-25 19:02:07,144:496 unique sequences left following deblurring
+INFO(124684921018176)2026-06-25 19:02:07,147:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159190_8_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(124684921018176)2026-06-25 19:02:07,579:finished processing file
+INFO(124684921018176)2026-06-25 19:02:07,580:finished processing per sample fasta files
+INFO(124684921018176)2026-06-25 19:02:07,580:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159190_8_L001_R1_001.fastq.gz finished
+INFO(138379034437440)2026-06-25 19:02:08,545:*************************
+INFO(138379034437440)2026-06-25 19:02:08,545:deblurring started
+WARNING(138379034437440)2026-06-25 19:02:08,545:deblur version 1.1.1 workflow started on /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159184_2_L001_R1_001.fastq.gz
+WARNING(138379034437440)2026-06-25 19:02:08,545:parameters: {'seqs_fp': '/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159184_2_L001_R1_001.fastq.gz', 'output_dir': '/tmp/tmpox3o72g1', 'pos_ref_fp': (), 'pos_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/88_otus',), 'neg_ref_fp': (), 'neg_ref_db_fp': ('/tmp/tmpox3o72g1/deblur_working_dir/artifacts',), 'overwrite': True, 'mean_error': 0.005, 'error_dist': [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005], 'indel_prob': 0.01, 'indel_max': 3, 'trim_length': 250, 'left_trim_length': 0, 'min_reads': 10, 'min_size': 2, 'threads_per_sample': 1, 'keep_tmp_files': True, 'log_level': 2, 'log_file': '/home/siddharth/liver_cirrhosis/qiime/PRJNA1019460/deblur.log', 'jobs_to_start': 1, 'is_worker_thread': True, 'logger': <Logger __main__ (INFO)>}
+INFO(138379034437440)2026-06-25 19:02:08,546:error_dist is : [1.0, 0.06, 0.02, 0.02, 0.01, 0.005, 0.005, 0.005, 0.001, 0.001, 0.001, 0.0005]
+INFO(138379034437440)2026-06-25 19:02:08,546:deblur worker thread started
+INFO(138379034437440)2026-06-25 19:02:08,546:processing per sample fasta files
+INFO(138379034437440)2026-06-25 19:02:08,546:--------------------------------------------------------
+INFO(138379034437440)2026-06-25 19:02:08,546:launch_workflow for file /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159184_2_L001_R1_001.fastq.gz
+INFO(138379034437440)2026-06-25 19:02:13,274:dereplicate seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159184_2_L001_R1_001.fastq.gz.trim
+INFO(138379034437440)2026-06-25 19:02:13,324:remove_artifacts_seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159184_2_L001_R1_001.fastq.gz.trim.derep
+INFO(138379034437440)2026-06-25 19:02:13,753:total sequences 1550, passing sequences 1550, failing sequences 0
+INFO(138379034437440)2026-06-25 19:02:13,753:multiple_sequence_alignment seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159184_2_L001_R1_001.fastq.gz.trim.derep.no_artifacts
+INFO(138379034437440)2026-06-25 19:02:18,297:deblurring 1550 sequences
+INFO(138379034437440)2026-06-25 19:02:19,775:583 unique sequences left following deblurring
+INFO(138379034437440)2026-06-25 19:02:19,779:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159184_2_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(138379034437440)2026-06-25 19:02:20,326:finished processing file
+INFO(138379034437440)2026-06-25 19:02:20,327:finished processing per sample fasta files
+INFO(138379034437440)2026-06-25 19:02:20,327:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159184_2_L001_R1_001.fastq.gz finished
+INFO(128875159304000)2026-06-25 19:02:21,172:deblurring 3748 sequences
+INFO(128875159304000)2026-06-25 19:02:26,698:1188 unique sequences left following deblurring
+INFO(128875159304000)2026-06-25 19:02:26,703:remove_chimeras_denovo_from_seqs seqs file /tmp/tmpox3o72g1/deblur_working_dir/SRR26159215_33_L001_R1_001.fastq.gz.trim.derep.no_artifacts.msa.deblurto working dir /tmp/tmpox3o72g1/deblur_working_dir
+INFO(128875159304000)2026-06-25 19:02:27,774:finished processing file
+INFO(128875159304000)2026-06-25 19:02:27,775:finished processing per sample fasta files
+INFO(128875159304000)2026-06-25 19:02:27,775:worker thread for /tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data/SRR26159215_33_L001_R1_001.fastq.gz finished
+INFO(127580177532736)2026-06-25 19:02:27,978:create_otu_table for 40 samples, into output table /tmp/tmpox3o72g1/all.biom
+INFO(127580177532736)2026-06-25 19:02:28,173:for output biom table loaded 40 samples, 2646 unique sequences
+INFO(127580177532736)2026-06-25 19:02:28,175:keeping 772 (out of 2646 sequences) with >=10 reads
+INFO(127580177532736)2026-06-25 19:02:28,212:saved to biom file /tmp/tmpox3o72g1/all.biom
+INFO(127580177532736)2026-06-25 19:02:28,214:saved sequence fasta file to /tmp/tmpox3o72g1/all.seqs.fa
+INFO(127580177532736)2026-06-25 19:02:28,215:getting 16s sequences from the biom table
+INFO(127580177532736)2026-06-25 19:02:28,215:remove_artifacts_seqs file /tmp/tmpox3o72g1/all.seqs.fa
+INFO(127580177532736)2026-06-25 19:02:31,322:total sequences 772, passing sequences 772, failing sequences 0
+WARNING(127580177532736)2026-06-25 19:02:31,335:removed 40 samples with reads per sample<1
+INFO(127580177532736)2026-06-25 19:02:31,338:wrote artifact only filtered biom table to /tmp/tmpox3o72g1/reference-non-hit.biom
+INFO(127580177532736)2026-06-25 19:02:31,338:saved biom table sequences to fasta file /tmp/tmpox3o72g1/reference-non-hit.seqs.fa
+INFO(127580177532736)2026-06-25 19:02:31,347:wrote 16s filtered biom table to /tmp/tmpox3o72g1/reference-hit.biom
+INFO(127580177532736)2026-06-25 19:02:31,350:saved biom table sequences to fasta file /tmp/tmpox3o72g1/reference-hit.seqs.fa
+INFO(127580177532736)2026-06-25 19:02:31,350:Keeping temp files
+INFO(127580177532736)2026-06-25 19:02:31,350:deblur workflow finished
+INFO(127580177532736)2026-06-25 19:02:31,350:output saved to /tmp/tmpox3o72g1/all.biom
+INFO(127580177532736)2026-06-25 19:02:31,350:------------------

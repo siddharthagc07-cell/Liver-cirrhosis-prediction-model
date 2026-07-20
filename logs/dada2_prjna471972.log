@@ -1,0 +1,20 @@
+R version 4.3.3 (2024-02-29) 
+Loading required package: Rcpp
+DADA2: 1.30.0 / Rcpp: 1.0.13.1 / RcppParallel: 5.1.9 
+2) Filtering .......................................................................
+3) Learning Error Rates
+270040160 total bases in 1038616 reads from 3 samples will be used for learning the error rates.
+207723200 total bases in 1038616 reads from 3 samples will be used for learning the error rates.
+3) Denoise samples .......................................................................
+.......................................................................
+5) Remove chimeras (method = consensus)
+6) Report read numbers through the pipeline
+7) Write output
+Running external command line application(s). This may print messages to stdout and/or stderr.
+The command(s) being run are below. These commands cannot be manually re-run as they will depend on temporary files that no longer exist.
+
+Command: run_dada.R --input_directory /home/siddharth/tmp/tmp2scfr37l/forward --input_directory_reverse /home/siddharth/tmp/tmp2scfr37l/reverse --output_path /home/siddharth/tmp/tmp2scfr37l/output.tsv.biom --output_track /home/siddharth/tmp/tmp2scfr37l/track.tsv --filtered_directory /home/siddharth/tmp/tmp2scfr37l/filt_f --filtered_directory_reverse /home/siddharth/tmp/tmp2scfr37l/filt_r --truncation_length 260 --truncation_length_reverse 200 --trim_left 0 --trim_left_reverse 0 --max_expected_errors 2 --max_expected_errors_reverse 5 --truncation_quality_score 2 --min_overlap 12 --pooling_method independent --chimera_method consensus --min_parental_fold 1.0 --allow_one_off False --num_threads 0 --learn_min_reads 1000000
+
+Saved FeatureTable[Frequency] to: /home/siddharth/liver_cirrhosis/qiime/PRJNA471972/table.qza
+Saved FeatureData[Sequence] to: /home/siddharth/liver_cirrhosis/qiime/PRJNA471972/rep-seqs.qza
+Saved SampleData[DADA2Stats] to: /home/siddharth/liver_cirrhosis/qiime/PRJNA471972/denoising-stats.qza
