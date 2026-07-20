@@ -1,0 +1,56 @@
+R version 4.3.3 (2024-02-29) 
+Loading required package: Rcpp
+DADA2: 1.30.0 / Rcpp: 1.0.13.1 / RcppParallel: 5.1.9 
+2) Filtering ........................................
+3) Learning Error Rates
+254138750 total bases in 1016555 reads from 34 samples will be used for learning the error rates.
+Error rates could not be estimated (this is usually because of very few reads).
+Error in getErrors(err, enforce = TRUE) : Error matrix is NULL.
+6: stop("Error matrix is NULL.")
+5: getErrors(err, enforce = TRUE)
+4: dada(drps, err = NULL, errorEstimationFunction = errorEstimationFunction, 
+       selfConsist = TRUE, multithread = multithread, verbose = verbose, 
+       MAX_CONSIST = MAX_CONSIST, OMEGA_C = OMEGA_C, ...)
+3: learnErrors(filts, nreads = nreads.learn, multithread = multithread, 
+       HOMOPOLYMER_GAP_PENALTY = HOMOPOLYMER_GAP_PENALTY, BAND_SIZE = BAND_SIZE)
+2: withCallingHandlers(expr, warning = function(w) if (inherits(w, 
+       classes)) tryInvokeRestart("muffleWarning"))
+1: suppressWarnings(learnErrors(filts, nreads = nreads.learn, multithread = multithread, 
+       HOMOPOLYMER_GAP_PENALTY = HOMOPOLYMER_GAP_PENALTY, BAND_SIZE = BAND_SIZE))
+Traceback (most recent call last):
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2_dada2/_denoise.py", line 243, in _denoise_single
+    run_commands([cmd])
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2_dada2/_denoise.py", line 38, in run_commands
+    subprocess.run(cmd, check=True)
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['run_dada.R', '--input_directory', '/home/siddharth/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data', '--output_path', '/home/siddharth/tmp/tmpf8es1k78/output.tsv.biom', '--output_track', '/home/siddharth/tmp/tmpf8es1k78/track.tsv', '--filtered_directory', '/home/siddharth/tmp/tmpf8es1k78', '--truncation_length', '250', '--trim_left', '0', '--max_expected_errors', '2', '--truncation_quality_score', '2', '--max_length', 'Inf', '--pooling_method', 'independent', '--chimera_method', 'consensus', '--min_parental_fold', '1.0', '--allow_one_off', 'False', '--num_threads', '0', '--learn_min_reads', '1000000', '--homopolymer_gap_penalty', 'NULL', '--band_size', '16']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2cli/commands.py", line 530, in __call__
+    results = self._execute_action(
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2cli/commands.py", line 602, in _execute_action
+    results = action(**arguments)
+  File "<decorator-gen-46>", line 2, in denoise_single
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/qiime2/sdk/action.py", line 299, in bound_callable
+    outputs = self._callable_executor_(
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/qiime2/sdk/action.py", line 570, in _callable_executor_
+    output_views = self._callable(**view_args)
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2_dada2/_denoise.py", line 269, in denoise_single
+    return _denoise_single(
+  File "/home/siddharth/miniconda3/envs/lc_qiime/lib/python3.10/site-packages/q2_dada2/_denoise.py", line 252, in _denoise_single
+    raise Exception("An error was encountered while running DADA2"
+Exception: An error was encountered while running DADA2 in R (return code 1), please inspect stdout and stderr to learn more.
+
+Plugin error from dada2:
+
+  An error was encountered while running DADA2 in R (return code 1), please inspect stdout and stderr to learn more.
+
+See above for debug info.
+Running external command line application(s). This may print messages to stdout and/or stderr.
+The command(s) being run are below. These commands cannot be manually re-run as they will depend on temporary files that no longer exist.
+
+Command: run_dada.R --input_directory /home/siddharth/tmp/qiime2/siddharth/data/59b35d9b-da37-4623-8262-a502b843625f/data --output_path /home/siddharth/tmp/tmpf8es1k78/output.tsv.biom --output_track /home/siddharth/tmp/tmpf8es1k78/track.tsv --filtered_directory /home/siddharth/tmp/tmpf8es1k78 --truncation_length 250 --trim_left 0 --max_expected_errors 2 --truncation_quality_score 2 --max_length Inf --pooling_method independent --chimera_method consensus --min_parental_fold 1.0 --allow_one_off False --num_threads 0 --learn_min_reads 1000000 --homopolymer_gap_penalty NULL --band_size 16
+

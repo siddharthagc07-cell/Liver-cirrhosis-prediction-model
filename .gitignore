@@ -1,0 +1,4 @@
+data/
+*.fastq.gz
+*.qza
+*.qzv

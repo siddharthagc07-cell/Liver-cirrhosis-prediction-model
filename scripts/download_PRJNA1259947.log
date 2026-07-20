@@ -1,0 +1,27 @@
+--2026-06-24 23:12:41--  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR334/079/SRR33459679/SRR33459679_1.fastq.gz
+           => ‘/home/siddharth/liver_cirrhosis/data/PRJNA1259947/SRR33459679_1.fastq.gz’
+Resolving ftp.sra.ebi.ac.uk (ftp.sra.ebi.ac.uk)... 193.62.193.165
+Connecting to ftp.sra.ebi.ac.uk (ftp.sra.ebi.ac.uk)|193.62.193.165|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /vol1/fastq/SRR334/079/SRR33459679 ... done.
+==> SIZE SRR33459679_1.fastq.gz ... 4110781
+File has already been retrieved.
+2026-06-24 23:12:47 (0.00 B/s) - ‘/home/siddharth/liver_cirrhosis/data/PRJNA1259947/SRR33459679_1.fastq.gz’ saved [4110781]
+
+--2026-06-24 23:12:47--  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR334/079/SRR33459679/SRR33459679_2.fastq.gz
+           => ‘/home/siddharth/liver_cirrhosis/data/PRJNA1259947/SRR33459679_2.fastq.gz’
+Connecting to ftp.sra.ebi.ac.uk (ftp.sra.ebi.ac.uk)|193.62.193.165|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /vol1/fastq/SRR334/079/SRR33459679 ... done.
+==> SIZE SRR33459679_2.fastq.gz ... 4048327
+File has already been retrieved.
+2026-06-24 23:12:49 (0.00 B/s) - ‘/home/siddharth/liver_cirrhosis/data/PRJNA1259947/SRR33459679_2.fastq.gz’ saved [4048327]
+
+--2026-06-24 23:12:49--  ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR334/081/SRR33459681/SRR33459681_1.fastq.gz
+           => ‘/home/siddharth/liver_cirrhosis/data/PRJNA1259947/SRR33459681_1.fastq.gz’
+Connecting to ftp.sra.ebi.ac.uk (ftp.sra.ebi.ac.uk)|193.62.193.165|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /vol1/fastq/SRR334/081/SRR33459681 ... 
