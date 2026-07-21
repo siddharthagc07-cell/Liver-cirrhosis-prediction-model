@@ -46,6 +46,7 @@ Combined: 195 samples, 429 bacterial genera.
 Random Forest was selected as the final model.
 
 ## Tools and technology used: 
+
 1.Operating System: Linux (Ubuntu)
 2.Bioinformatics: QIIME2, DADA2, Deblur, SILVA 138
 3.Programming & Data Analysis: Python, pandas, NumPy
