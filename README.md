@@ -54,17 +54,33 @@ Random Forest was selected as the final model.
  5.Model Explainability: SHAP
 
 ## Current Limitations & Future Scope
+ools & Technologies Used
 
-Current Limitations
--Limited sample size and class imbalance.
--Based on publicly available 16S rRNA datasets from multiple studies, which may introduce batch effects.
--16S rRNA sequencing provides genus-level information but limited functional and species-level resolution.
+Operating System
 
-Future Scope
--Validate the model on larger and more diverse cohorts.
--Incorporate shotgun metagenomic sequencing for higher taxonomic and functional resolution.
--Improve model performance through advanced feature selection and external validation.
+Linux (Ubuntu)
 
+Bioinformatics
+
+QIIME2
+DADA2
+Deblur
+SILVA 138
+
+Programming & Data Analysis
+
+Python
+pandas
+NumPy
+
+Machine Learning
+
+scikit-learn
+XGBoost
+
+Model Explainability
+
+SHAP
 
 
 ## Author
