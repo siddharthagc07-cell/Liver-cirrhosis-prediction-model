@@ -70,3 +70,13 @@ Random Forest was selected as the final model.
 
 **Model Explainability**
 - SHAP
+
+## Limitations
+- Small sample size (195) across 3 cohorts
+- Genus-level resolution only
+
+## Future Scope
+- Species/strain-level classification
+- Include clinical metadata (diet, medication, disease stage)
+- Deploy Flask app with full UI
+- Expand dataset size
