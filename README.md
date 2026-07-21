@@ -45,15 +45,24 @@ Combined: 195 samples, 429 bacterial genera.
 
 Random Forest was selected as the final model.
 
-## Tools Used
+## Tools and technology used: 
+1.Operating System: Linux (Ubuntu)
+2.Bioinformatics: QIIME2, DADA2, Deblur, SILVA 138
+3.Programming & Data Analysis: Python, pandas, NumPy
+4.Machine Learning: scikit-learn, XGBoost
+5.Model Explainability: SHAP
 
-QIIME2, DADA2, Deblur, Silva 138, Python, scikit-learn, XGBoost, SHAP, pandas, NumPy
+## Current Limitations & Future Scope
 
-## Limitations
+Current Limitations
+-Limited sample size and class imbalance.
+-Based on publicly available 16S rRNA datasets from multiple studies, which may introduce batch effects.
+-16S rRNA sequencing provides genus-level information but limited functional and species-level resolution.
 
-- Genus-level resolution only (16S rRNA limitation)
-- Limited sample size (195 samples)
-- Single data modality (16S microbiome data only)
+Future Scope
+-Validate the model on larger and more diverse cohorts.
+-Incorporate shotgun metagenomic sequencing for higher taxonomic and functional resolution.
+-Improve model performance through advanced feature selection and external validation.
 
 
 
