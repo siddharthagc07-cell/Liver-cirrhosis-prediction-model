@@ -47,31 +47,26 @@ Random Forest was selected as the final model.
 
 ## Technologies Used
 
-### Operating System
+**Operating System**
 - Linux (Ubuntu)
 
-### Bioinformatics
-- QIIME2
-- DADA2
-- Deblur
-- SILVA 138
+**Bioinformatics**
+- QIIME2 — microbiome analysis platform (used here for 16S rRNA processing)
+- DADA2 — denoising & ASV inference (paired-end)
+- Deblur — denoising & ASV inference (single-end)
+- SILVA 138 — taxonomic reference database
 
-### Programming & Data Processing
+**Programming & Data Processing**
 - Python
 - pandas
 - NumPy
 
-### Machine Learning
+**Machine Learning**
 - scikit-learn
 - Random Forest
 - XGBoost
 - Support Vector Machine (SVM)
 - Logistic Regression
 
-### Model Explainability
+**Model Explainability**
 - SHAP
-
-## Author
-
-Siddharth Shivangi — M.Sc. Microbiology, MIT-WPU Pune
-Bioinformatics Internship, GeneSpectrum Life Sciences LLP
