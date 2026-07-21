@@ -47,11 +47,11 @@ Random Forest was selected as the final model.
 
 ## Tools and technology used: 
 
-1.Operating System: Linux (Ubuntu)
-2.Bioinformatics: QIIME2, DADA2, Deblur, SILVA 138
-3.Programming & Data Analysis: Python, pandas, NumPy
-4.Machine Learning: scikit-learn, XGBoost
-5.Model Explainability: SHAP
+1.Operating System: Linux (Ubuntu) 
+ 2.Bioinformatics: QIIME2, DADA2, Deblur, SILVA 138 
+ 3.Programming & Data Analysis: Python, pandas, NumPy
+ 4.Machine Learning: scikit-learn, XGBoost
+ 5.Model Explainability: SHAP
 
 ## Current Limitations & Future Scope
 
