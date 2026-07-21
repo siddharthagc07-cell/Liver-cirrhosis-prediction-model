@@ -56,34 +56,20 @@ Random Forest was selected as the final model.
 - Deblur
 - SILVA 138
 
-### Programming & Data Analysis
+### Programming & Data Processing
 - Python
 - pandas
 - NumPy
 
 ### Machine Learning
 - scikit-learn
+- Random Forest
 - XGBoost
+- Support Vector Machine (SVM)
+- Logistic Regression
 
 ### Model Explainability
 - SHAP
-
----
-
-## Current Limitations
-
-- Limited sample size and class imbalance.
-- Publicly available 16S rRNA datasets from multiple studies may introduce batch effects.
-- 16S rRNA sequencing provides genus-level information with limited species-level and functional resolution.
-
----
-
-## Future Scope
-
-- Validate the model using larger and more diverse cohorts.
-- Incorporate shotgun metagenomic sequencing for improved taxonomic and functional resolution.
-- Improve model performance through advanced feature selection and external validation.
-
 
 ## Author
 
