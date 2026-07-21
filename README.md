@@ -45,42 +45,44 @@ Combined: 195 samples, 429 bacterial genera.
 
 Random Forest was selected as the final model.
 
-## Tools and technology used: 
+## Technologies Used
 
-1.Operating System: Linux (Ubuntu) 
- 2.Bioinformatics: QIIME2, DADA2, Deblur, SILVA 138 
- 3.Programming & Data Analysis: Python, pandas, NumPy
- 4.Machine Learning: scikit-learn, XGBoost
- 5.Model Explainability: SHAP
+### Operating System
+- Linux (Ubuntu)
 
-## Current Limitations & Future Scope
-ools & Technologies Used
+### Bioinformatics
+- QIIME2
+- DADA2
+- Deblur
+- SILVA 138
 
-Operating System
+### Programming & Data Analysis
+- Python
+- pandas
+- NumPy
 
-Linux (Ubuntu)
+### Machine Learning
+- scikit-learn
+- XGBoost
 
-Bioinformatics
+### Model Explainability
+- SHAP
 
-QIIME2
-DADA2
-Deblur
-SILVA 138
+---
 
-Programming & Data Analysis
+## Current Limitations
 
-Python
-pandas
-NumPy
+- Limited sample size and class imbalance.
+- Publicly available 16S rRNA datasets from multiple studies may introduce batch effects.
+- 16S rRNA sequencing provides genus-level information with limited species-level and functional resolution.
 
-Machine Learning
+---
 
-scikit-learn
-XGBoost
+## Future Scope
 
-Model Explainability
-
-SHAP
+- Validate the model using larger and more diverse cohorts.
+- Incorporate shotgun metagenomic sequencing for improved taxonomic and functional resolution.
+- Improve model performance through advanced feature selection and external validation.
 
 
 ## Author
