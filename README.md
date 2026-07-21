@@ -55,9 +55,7 @@ QIIME2, DADA2, Deblur, Silva 138, Python, scikit-learn, XGBoost, SHAP, pandas, N
 - Limited sample size (195 samples)
 - Single data modality (16S microbiome data only)
 
-## Note
 
-AI-assisted coding tools were used for implementation. All methodology, results, and interpretations were independently understood and validated.
 
 ## Author
 
