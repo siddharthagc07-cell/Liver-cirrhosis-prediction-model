@@ -45,21 +45,38 @@ Combined: 195 samples, 429 bacterial genera.
 
 Random Forest was selected as the final model.
 
-## Tools Used
+## Technologies Used
 
-QIIME2, DADA2, Deblur, Silva 138, Python, scikit-learn, XGBoost, SHAP, pandas, NumPy
+**Operating System**
+- Linux (Ubuntu)
+
+**Bioinformatics**
+- QIIME2 — microbiome analysis platform (used here for 16S rRNA processing)
+- DADA2 — denoising & ASV inference (paired-end)
+- Deblur — denoising & ASV inference (single-end)
+- SILVA 138 — taxonomic reference database
+
+**Programming & Data Processing**
+- Python
+- pandas
+- NumPy
+
+**Machine Learning**
+- scikit-learn
+- Random Forest
+- XGBoost
+- Support Vector Machine (SVM)
+- Logistic Regression
+
+**Model Explainability**
+- SHAP
 
 ## Limitations
+- Small sample size (195) across 3 cohorts
+- Genus-level resolution only
 
-- Genus-level resolution only (16S rRNA limitation)
-- Limited sample size (195 samples)
-- Single data modality (16S microbiome data only)
-
-## Note
-
-AI-assisted coding tools were used for implementation. All methodology, results, and interpretations were independently understood and validated.
-
-## Author
-
-Siddharth Shivangi — M.Sc. Microbiology, MIT-WPU Pune
-Bioinformatics Internship, GeneSpectrum Life Sciences LLP
+## Future Scope
+- Species/strain-level classification
+- Include clinical metadata (diet, medication, disease stage)
+- Deploy Flask app with full UI
+- Expand dataset size
