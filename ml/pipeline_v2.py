@@ -46,6 +46,13 @@ PROTOCOLS = {
     'PRJNA1259947': ('TACGGRAGGCAGCAG', 'AGGGTATCTAATCCT', 230, 200),
 }
 
+# Single-end Deblur protocols - no primer trimming, single trim_length param.
+# Kept SEPARATE from PROTOCOLS since paired-end and single-end processing
+# functions take structurally different arguments.
+SINGLE_END_PROTOCOLS = {
+    'PRJNA1019460': 250,
+}
+
 
 def run_cmd(cmd, description):
     """Run a shell command, print status, raise on failure."""
@@ -147,6 +154,79 @@ def process_new_sample(sample_id, fwd_fastq, rev_fastq, work_dir, classifier_pat
     return tsv_path
 
 
+def process_new_sample_single_end(sample_id, fastq, work_dir, classifier_path, trim_length):
+    """Raw single-end FASTQ -> genus-level feature TSV via QIIME2.
+    NO cutadapt step — confirmed via provenance that PRJNA1019460's
+    original processing went straight from import to Deblur (reads were
+    already primer-trimmed by the original submitters before deposit).
+    Uses Deblur, not DADA2, matching the original single-end protocol."""
+    os.makedirs(work_dir, exist_ok=True)
+    manifest_path = os.path.join(work_dir, "manifest.tsv")
+    with open(manifest_path, "w") as f:
+        f.write("sample-id\tabsolute-filepath\n")
+        f.write(f"{sample_id}\t{os.path.abspath(fastq)}\n")
+    demux_qza = os.path.join(work_dir, "demux.qza")
+    table_qza = os.path.join(work_dir, "table.qza")
+    rep_seqs_qza = os.path.join(work_dir, "rep-seqs.qza")
+    deblur_stats_qza = os.path.join(work_dir, "deblur-stats.qza")
+    taxonomy_qza = os.path.join(work_dir, "taxonomy.qza")
+    taxa_collapsed_qza = os.path.join(work_dir, "genus-table.qza")
+    export_dir = os.path.join(work_dir, "exported")
+
+    run_cmd([
+        "qiime", "tools", "import",
+        "--type", "SampleData[SequencesWithQuality]",
+        "--input-path", manifest_path,
+        "--output-path", demux_qza,
+        "--input-format", "SingleEndFastqManifestPhred33V2"
+    ], "Import raw single-end FASTQ")
+
+    # NO quality-filter step — confirmed via provenance that Deblur's
+    # input UUID matched the raw import artifact directly, with nothing
+    # in between. This is unusual for a standard QIIME2 Deblur workflow
+    # (quality-filter q-score is normally a required precursor), but it's
+    # what the original run actually did, so we match it exactly here
+    # rather than "fixing" it — matching genus columns matters more than
+    # following the textbook-standard workflow.
+    run_cmd([
+        "qiime", "deblur", "denoise-16S",
+        "--i-demultiplexed-seqs", demux_qza,
+        "--p-trim-length", str(trim_length),
+        "--p-sample-stats",
+        "--o-table", table_qza,
+        "--o-representative-sequences", rep_seqs_qza,
+        "--o-stats", deblur_stats_qza
+    ], f"Deblur denoise (trim-length {trim_length})")
+
+    run_cmd([
+        "qiime", "feature-classifier", "classify-sklearn",
+        "--i-classifier", classifier_path,
+        "--i-reads", rep_seqs_qza,
+        "--p-confidence", "0.7", "--p-n-jobs", "4",
+        "--o-classification", taxonomy_qza
+    ], "Silva taxonomy classification")
+
+    run_cmd([
+        "qiime", "taxa", "collapse",
+        "--i-table", table_qza,
+        "--i-taxonomy", taxonomy_qza,
+        "--p-level", "6",
+        "--o-collapsed-table", taxa_collapsed_qza
+    ], "Collapse to genus level")
+
+    run_cmd([
+        "qiime", "tools", "export",
+        "--input-path", taxa_collapsed_qza,
+        "--output-path", export_dir
+    ], "Export genus table")
+
+    biom_path = os.path.join(export_dir, "feature-table.biom")
+    tsv_path = os.path.join(export_dir, "feature-table.tsv")
+    run_cmd(["biom", "convert", "-i", biom_path, "-o", tsv_path, "--to-tsv"],
+            "Convert biom to TSV")
+    return tsv_path
+
+
 def align_features(tsv_path, training_columns, sample_id):
     """Reindex new sample's genus columns against the model's 429 training columns."""
     raw = pd.read_csv(tsv_path, sep='\t', skiprows=1, index_col=0).T
@@ -221,8 +301,64 @@ def predict_new_sample(sample_id, fwd_fastq, rev_fastq, front_f, front_r,
     return result
 
 
+def predict_new_sample_single_end(sample_id, fastq, trim_length, work_dir=None, verbose=True):
+    """
+    End-to-end single-end version: raw FASTQ -> QIIME2 (Deblur) -> alignment -> RF prediction.
+    Mirrors predict_new_sample() but calls process_new_sample_single_end().
+    """
+    if work_dir is None:
+        work_dir = os.path.join(WORK_DIR_ROOT, sample_id)
+
+    if verbose:
+        print(f"\n{'='*60}\nProcessing sample (single-end): {sample_id}\n{'='*60}")
+
+    tsv_path = process_new_sample_single_end(sample_id, fastq, work_dir, CLASSIFIER_PATH, trim_length)
+
+    bundle = joblib.load(MODEL_PATH)
+    model, le, training_columns = bundle['model'], bundle['label_encoder'], bundle['training_columns']
+
+    aligned, n_detected, n_matched, n_dropped = align_features(tsv_path, training_columns, sample_id)
+
+    X = aligned.to_numpy(dtype=np.float32)
+    proba = model.predict_proba(X)[0]
+    pred_class = le.inverse_transform([model.predict(X)[0]])[0]
+    classes = list(le.classes_)
+    class_probs = {c: round(float(proba[classes.index(c)]) * 100, 1) for c in classes}
+    confidence = max(class_probs.values())
+
+    result = {
+        'sample_id': sample_id,
+        'predicted_class': pred_class,
+        'confidence_pct': confidence,
+        'class_probabilities': class_probs,
+        'n_genera_detected': n_detected,
+        'n_genera_matched': n_matched,
+        'n_genera_dropped': n_dropped,
+        'feature_tsv_path': tsv_path,
+    }
+
+    if verbose:
+        print(f"\n{'='*60}\nPREDICTION RESULT\n{'='*60}")
+        print(f"  Sample ID        : {result['sample_id']}")
+        print(f"  Predicted Class  : {result['predicted_class']}")
+        print(f"  Confidence       : {result['confidence_pct']}%")
+        for cls, pct in class_probs.items():
+            print(f"    {cls:12s}: {pct}%")
+        print(f"  Genera detected  : {n_detected}")
+        print(f"  Genera matched   : {n_matched} (used in prediction)")
+        print(f"  Genera dropped   : {n_dropped} (unseen in training)")
+        print(f"{'='*60}\n")
+
+    return result
+
+
 if __name__ == "__main__":
-    if len(sys.argv) == 5 and sys.argv[4] in PROTOCOLS:
+    if len(sys.argv) == 4 and sys.argv[3] in SINGLE_END_PROTOCOLS:
+        sample_id, fastq, protocol = sys.argv[1], sys.argv[2], sys.argv[3]
+        trim_length = SINGLE_END_PROTOCOLS[protocol]
+        result = predict_new_sample_single_end(sample_id, fastq, trim_length)
+        sys.exit(0)
+    elif len(sys.argv) == 5 and sys.argv[4] in PROTOCOLS:
         sample_id, fwd, rev, protocol = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
         front_f, front_r, trunc_f, trunc_r = PROTOCOLS[protocol]
     elif len(sys.argv) == 9 and sys.argv[4] == 'custom':
@@ -231,6 +367,9 @@ if __name__ == "__main__":
         trunc_f, trunc_r = int(sys.argv[7]), int(sys.argv[8])
     else:
         print("Usage:")
+        print("  python3 pipeline_v2.py <sample_id> <fastq.gz> <single_end_protocol>")
+        print(f"    <single_end_protocol> one of: {list(SINGLE_END_PROTOCOLS.keys())}")
+        print("  OR")
         print("  python3 pipeline_v2.py <sample_id> <fwd.fastq.gz> <rev.fastq.gz> <protocol>")
         print(f"    <protocol> one of: {list(PROTOCOLS.keys())}")
         print("  OR")
