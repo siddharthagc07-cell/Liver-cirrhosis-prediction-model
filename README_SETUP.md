@@ -11,7 +11,7 @@ conda activate lc_qiime
 
 | File | Size | Purpose | Get it from |
 |------|------|---------|--------------|
-| `ml/pipeline_model.pkl` | few MB | Trained RF model + label encoder + training columns | [ADD RELEASE LINK] |
+| `ml/pipeline_model.pkl` | few MB | Trained RF model + label encoder + training columns | https://github.com/siddharthagc07-cell/Liver-cirrhosis-prediction-model/releases/download/v1.0-model-assets/pipeline_model.pkl |
 | `ml/reference/silva-138-99-nb-classifier.qza` | 209 MB | Silva 138 taxonomy classifier | https://data.qiime2.org/classifiers/sklearn-1.4.2/silva/silva-138-99-nb-classifier.qza |
 
 Place them at those exact paths relative to the repo root.
