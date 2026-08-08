@@ -1,4 +1,25 @@
+# Large binaries — hosted separately, not in git
+ml/pipeline_model.pkl
+ml/reference/*.qza
+
+# Raw and intermediate sequencing data — never belongs in git
 data/
-*.fastq.gz
-*.qza
-*.qzv
+qiime/**/*.qza
+qiime/**/*.qzv
+qiime/**/*.fastq.gz
+qiime/**/exported/
+qiime/**/trimmed_demux_exported/
+qiime/**/trimmed_summary_inspect/
+
+# Prediction working directories (regenerated per run)
+ml/predictions/
+ml/new_sample_test*/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+*.swp
