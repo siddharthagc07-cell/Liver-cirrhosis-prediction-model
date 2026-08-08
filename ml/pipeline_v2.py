@@ -227,6 +227,64 @@ def process_new_sample_single_end(sample_id, fastq, work_dir, classifier_path, t
     return tsv_path
 
 
+def explain_prediction(model, aligned_row, training_columns, top_n=5):
+    """
+    SHAP TreeExplainer on the single aligned sample, using the actual
+    deployed model (not a separately-retrained one - this avoids the
+    max_features='sqrt' vs 'log2' mismatch between pipeline_model.pkl
+    and the older shap_analysis.py script). Returns top N genera pushing
+    toward Cirrhosis and top N toward Healthy, using raw taxonomy-string
+    column names internally but cleaned names in the output.
+    """
+    import shap
+    explainer = shap.TreeExplainer(model)
+    shap_values = explainer.shap_values(aligned_row)
+    cirrhosis_idx = 0
+    sv = shap_values[0, :, cirrhosis_idx]
+    contrib = pd.Series(sv, index=training_columns).sort_values()
+    top_toward_healthy = contrib.head(top_n)
+    top_toward_cirrhosis = contrib.tail(top_n)[::-1]
+
+    def clean(name):
+        parts = name.split(';')
+        last = parts[-1].strip()
+        return last if last not in ['__', '', 'g__'] else (parts[-2].strip() if len(parts) > 1 else last)
+
+    return {
+        'top_toward_cirrhosis': [{'genus': clean(g), 'shap_value': round(float(v), 4)} for g, v in top_toward_cirrhosis.items()],
+        'top_toward_healthy': [{'genus': clean(g), 'shap_value': round(float(v), 4)} for g, v in top_toward_healthy.items()],
+    }
+
+
+def explain_prediction(model, aligned_row, training_columns, top_n=5):
+    """
+    SHAP TreeExplainer on the single aligned sample, using the actual
+    deployed model (not a separately-retrained one - this avoids the
+    max_features='sqrt' vs 'log2' mismatch between pipeline_model.pkl
+    and the older shap_analysis.py script). Returns top N genera pushing
+    toward Cirrhosis and top N toward Healthy, using raw taxonomy-string
+    column names internally but cleaned names in the output.
+    """
+    import shap
+    explainer = shap.TreeExplainer(model)
+    shap_values = explainer.shap_values(aligned_row)
+    cirrhosis_idx = 0
+    sv = shap_values[0, :, cirrhosis_idx]
+    contrib = pd.Series(sv, index=training_columns).sort_values()
+    top_toward_healthy = contrib.head(top_n)
+    top_toward_cirrhosis = contrib.tail(top_n)[::-1]
+
+    def clean(name):
+        parts = name.split(';')
+        last = parts[-1].strip()
+        return last if last not in ['__', '', 'g__'] else (parts[-2].strip() if len(parts) > 1 else last)
+
+    return {
+        'top_toward_cirrhosis': [{'genus': clean(g), 'shap_value': round(float(v), 4)} for g, v in top_toward_cirrhosis.items()],
+        'top_toward_healthy': [{'genus': clean(g), 'shap_value': round(float(v), 4)} for g, v in top_toward_healthy.items()],
+    }
+
+
 def align_features(tsv_path, training_columns, sample_id):
     """Reindex new sample's genus columns against the model's 429 training columns."""
     raw = pd.read_csv(tsv_path, sep='\t', skiprows=1, index_col=0).T
@@ -275,6 +333,8 @@ def predict_new_sample(sample_id, fwd_fastq, rev_fastq, front_f, front_r,
     class_probs = {c: round(float(proba[classes.index(c)]) * 100, 1) for c in classes}
     confidence = max(class_probs.values())
 
+    explanation = explain_prediction(model, X, training_columns)
+
     result = {
         'sample_id': sample_id,
         'predicted_class': pred_class,
@@ -284,6 +344,7 @@ def predict_new_sample(sample_id, fwd_fastq, rev_fastq, front_f, front_r,
         'n_genera_matched': n_matched,
         'n_genera_dropped': n_dropped,
         'feature_tsv_path': tsv_path,
+        'shap_explanation': explanation,
     }
 
     if verbose:
@@ -296,6 +357,12 @@ def predict_new_sample(sample_id, fwd_fastq, rev_fastq, front_f, front_r,
         print(f"  Genera detected  : {n_detected}")
         print(f"  Genera matched   : {n_matched} (used in prediction)")
         print(f"  Genera dropped   : {n_dropped} (unseen in training)")
+        print(f"\n  Top genera pushing toward Cirrhosis:")
+        for item in explanation['top_toward_cirrhosis']:
+            print(f"    {item['genus']:30s} SHAP: {item['shap_value']:+.4f}")
+        print(f"  Top genera pushing toward Healthy:")
+        for item in explanation['top_toward_healthy']:
+            print(f"    {item['genus']:30s} SHAP: {item['shap_value']:+.4f}")
         print(f"{'='*60}\n")
 
     return result
@@ -326,6 +393,8 @@ def predict_new_sample_single_end(sample_id, fastq, trim_length, work_dir=None, 
     class_probs = {c: round(float(proba[classes.index(c)]) * 100, 1) for c in classes}
     confidence = max(class_probs.values())
 
+    explanation = explain_prediction(model, X, training_columns)
+
     result = {
         'sample_id': sample_id,
         'predicted_class': pred_class,
@@ -335,6 +404,7 @@ def predict_new_sample_single_end(sample_id, fastq, trim_length, work_dir=None, 
         'n_genera_matched': n_matched,
         'n_genera_dropped': n_dropped,
         'feature_tsv_path': tsv_path,
+        'shap_explanation': explanation,
     }
 
     if verbose:
@@ -347,6 +417,12 @@ def predict_new_sample_single_end(sample_id, fastq, trim_length, work_dir=None, 
         print(f"  Genera detected  : {n_detected}")
         print(f"  Genera matched   : {n_matched} (used in prediction)")
         print(f"  Genera dropped   : {n_dropped} (unseen in training)")
+        print(f"\n  Top genera pushing toward Cirrhosis:")
+        for item in explanation['top_toward_cirrhosis']:
+            print(f"    {item['genus']:30s} SHAP: {item['shap_value']:+.4f}")
+        print(f"  Top genera pushing toward Healthy:")
+        for item in explanation['top_toward_healthy']:
+            print(f"    {item['genus']:30s} SHAP: {item['shap_value']:+.4f}")
         print(f"{'='*60}\n")
 
     return result
