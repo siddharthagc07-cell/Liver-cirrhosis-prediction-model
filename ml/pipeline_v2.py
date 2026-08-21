@@ -35,7 +35,7 @@ import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
 
-BASE = '/home/siddharth/liver_cirrhosis'
+BASE = '/drive/siddharth/Liver_Cirrhosis_ML'
 CLASSIFIER_PATH = f'{BASE}/ml/reference/silva-138-99-nb-classifier.qza'
 MODEL_PATH = f'{BASE}/ml/pipeline_model.pkl'
 WORK_DIR_ROOT = f'{BASE}/ml/predictions'

@@ -9,12 +9,12 @@ warnings.filterwarnings('ignore')
 print("Loading data...")
 
 # 1. Feature table (same load as phase1_ml_gridsearch.py)
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 ft = ft.T  # samples x genera
 
 # 2. Metadata
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 # 3. Align samples
@@ -54,6 +54,6 @@ bundle = {
     'label_encoder': le,
     'training_columns': training_columns,
 }
-joblib.dump(bundle, '/home/siddharth/liver_cirrhosis/ml/pipeline_model.pkl')
+joblib.dump(bundle, '/drive/siddharth/Liver_Cirrhosis_ML/ml/pipeline_model.pkl')
 print("Saved bundle to pipeline_model.pkl")
 

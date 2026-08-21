@@ -14,12 +14,12 @@ warnings.filterwarnings('ignore')
 print("Loading data...")
 
 # ── 1. Feature table ───────────────────────────────────────────────────
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 ft = ft.T  # samples x genera
 
 # ── 2. Metadata ────────────────────────────────────────────────────────
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 # ── 3. Align samples ───────────────────────────────────────────────────
@@ -144,10 +144,10 @@ for name, params in best_params_log.items():
 
 # ── 11. Save ───────────────────────────────────────────────────────────
 out = pd.DataFrame(all_results).T
-out.to_csv('/home/siddharth/liver_cirrhosis/ml/results/phase1_tuned_cv_results.csv')
+out.to_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/phase1_tuned_cv_results.csv')
 
 params_out = pd.DataFrame(best_params_log).T
-params_out.to_csv('/home/siddharth/liver_cirrhosis/ml/results/phase1_best_params.csv')
+params_out.to_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/phase1_best_params.csv')
 
 print("\nTuned results saved to: ml/results/phase1_tuned_cv_results.csv")
 print("Best hyperparameters saved to: ml/results/phase1_best_params.csv")

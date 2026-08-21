@@ -8,14 +8,14 @@ from sklearn.metrics import roc_auc_score, accuracy_score, f1_score
 import warnings
 warnings.filterwarnings('ignore')
 
-os.makedirs('/home/siddharth/liver_cirrhosis/ml/results', exist_ok=True)
+os.makedirs('/drive/siddharth/Liver_Cirrhosis_ML/ml/results', exist_ok=True)
 
 print("Loading data...")
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 ft = ft.T
 
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 common = ft.index.intersection(meta.index)
@@ -82,7 +82,7 @@ for test_ds in datasets:
         })
 
 results_df = pd.DataFrame(all_results)
-results_df.to_csv('/home/siddharth/liver_cirrhosis/ml/results/lodo_clr_results.csv', index=False)
+results_df.to_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/lodo_clr_results.csv', index=False)
 
 print("\n" + "="*65)
 print("  LODO SUMMARY")

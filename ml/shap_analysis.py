@@ -9,11 +9,11 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 print("Loading data...")
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 ft = ft.T
 
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 common = ft.index.intersection(meta.index)
@@ -42,7 +42,7 @@ print("Computing SHAP values (1-2 mins)...")
 explainer = shap.TreeExplainer(rf)
 shap_values = explainer.shap_values(X)
 
-os.makedirs('/home/siddharth/liver_cirrhosis/ml/results/plots', exist_ok=True)
+os.makedirs('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/plots', exist_ok=True)
 
 # Beeswarm plot
 print("Saving beeswarm plot...")
@@ -50,7 +50,7 @@ plt.figure(figsize=(10, 8))
 shap.summary_plot(shap_values[:, :, 0], X, max_display=20, show=False, plot_type='dot')
 plt.title('SHAP Summary — Cirrhosis vs Healthy\n(positive SHAP = pushes toward Cirrhosis)', fontsize=12)
 plt.tight_layout()
-plt.savefig('/home/siddharth/liver_cirrhosis/ml/results/plots/shap_beeswarm.png',
+plt.savefig('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/plots/shap_beeswarm.png',
             dpi=150, bbox_inches='tight')
 plt.close()
 
@@ -60,7 +60,7 @@ plt.figure(figsize=(10, 8))
 shap.summary_plot(shap_values[:, :, 0], X, max_display=20, show=False, plot_type='bar')
 plt.title('Mean Absolute SHAP — Top 20 Genera', fontsize=12)
 plt.tight_layout()
-plt.savefig('/home/siddharth/liver_cirrhosis/ml/results/plots/shap_bar.png',
+plt.savefig('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/plots/shap_bar.png',
             dpi=150, bbox_inches='tight')
 plt.close()
 
@@ -77,6 +77,6 @@ for _, row in summary.iterrows():
     direction = "→ Cirrhosis" if row['mean_shap'] > 0 else "→ Healthy  "
     print(f"  {row['genus']:<45} {direction}  shap={row['mean_shap']:+.4f}")
 
-summary.to_csv('/home/siddharth/liver_cirrhosis/ml/results/shap_top20.csv', index=False)
+summary.to_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/shap_top20.csv', index=False)
 print("\nPlots saved to: ml/results/plots/")
 print("Done.")

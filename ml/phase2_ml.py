@@ -13,12 +13,12 @@ warnings.filterwarnings('ignore')
 print("Loading data...")
 
 # ── 1. Feature table ───────────────────────────────────────────────────
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 ft = ft.T
 
 # ── 2. Metadata ────────────────────────────────────────────────────────
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 # ── 3. Filter to Cirrhosis samples only with phase2 labels ────────────
@@ -123,6 +123,6 @@ print(summary.round(3).to_string())
 
 # ── 11. Save ───────────────────────────────────────────────────────────
 pd.DataFrame(all_results).T.to_csv(
-    '/home/siddharth/liver_cirrhosis/ml/results/phase2_cv_results.csv')
+    '/drive/siddharth/Liver_Cirrhosis_ML/ml/results/phase2_cv_results.csv')
 print("\nFull results saved to: ml/results/phase2_cv_results.csv")
 print("=" * 62)

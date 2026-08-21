@@ -13,7 +13,7 @@ print("  PHASE 2 LODO ONLY")
 print("="*80)
 
 ft = pd.read_csv('feature_table.tsv', sep='\t', skiprows=1, index_col=0).T
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv', sep='\t', index_col=0)
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv', sep='\t', index_col=0)
 
 meta_p2 = meta[meta['phase2_label'].isin(['Compensated', 'Decompensated'])].copy()
 common = ft.index.intersection(meta_p2.index)

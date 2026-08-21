@@ -59,11 +59,11 @@ def align_features(tsv_path, training_columns, sample_id=None):
 
 if __name__ == "__main__":
     import joblib
-    bundle = joblib.load('/home/siddharth/liver_cirrhosis/ml/pipeline_model.pkl')
+    bundle = joblib.load('/drive/siddharth/Liver_Cirrhosis_ML/ml/pipeline_model.pkl')
     training_columns = bundle['training_columns']
 
     result = align_features(
-        tsv_path='/home/siddharth/liver_cirrhosis/ml/new_sample_test/exported/feature-table.tsv',
+        tsv_path='/drive/siddharth/Liver_Cirrhosis_ML/ml/new_sample_test/exported/feature-table.tsv',
         training_columns=training_columns,
         sample_id='TEST_SAMPLE'
     )

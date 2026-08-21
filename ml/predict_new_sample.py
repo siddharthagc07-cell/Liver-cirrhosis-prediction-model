@@ -104,11 +104,11 @@ def predict_new_sample(sample_id, fwd_fastq, rev_fastq, work_dir,
 if __name__ == "__main__":
     result = predict_new_sample(
         sample_id="TEST_SAMPLE",
-        fwd_fastq="/home/siddharth/liver_cirrhosis/data/PRJNA471972/SRR7182199_1.fastq.gz",
-        rev_fastq="/home/siddharth/liver_cirrhosis/data/PRJNA471972/SRR7182199_2.fastq.gz",
-        work_dir="/home/siddharth/liver_cirrhosis/ml/new_sample_test2",
-        classifier_path="/home/siddharth/liver_cirrhosis/ml/reference/silva-138-99-nb-classifier.qza",
-        model_path="/home/siddharth/liver_cirrhosis/ml/pipeline_model.pkl"
+        fwd_fastq="/drive/siddharth/Liver_Cirrhosis_ML/data/PRJNA471972/SRR7182199_1.fastq.gz",
+        rev_fastq="/drive/siddharth/Liver_Cirrhosis_ML/data/PRJNA471972/SRR7182199_2.fastq.gz",
+        work_dir="/drive/siddharth/Liver_Cirrhosis_ML/ml/new_sample_test2",
+        classifier_path="/drive/siddharth/Liver_Cirrhosis_ML/ml/reference/silva-138-99-nb-classifier.qza",
+        model_path="/drive/siddharth/Liver_Cirrhosis_ML/ml/pipeline_model.pkl"
     )
     print("Returned dict:")
     print(result)

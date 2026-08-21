@@ -14,14 +14,14 @@ import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings('ignore')
 
-os.makedirs('/home/siddharth/liver_cirrhosis/ml/results/plots', exist_ok=True)
+os.makedirs('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/plots', exist_ok=True)
 
 print("Loading data...")
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 ft = ft.T
 
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 common = ft.index.intersection(meta.index)
@@ -73,7 +73,7 @@ plt.title('ROC Curves — Phase 1: Healthy vs Cirrhosis\n5-Fold Cross Validation
 plt.legend(loc='lower right', fontsize=10)
 plt.grid(alpha=0.3)
 plt.tight_layout()
-plt.savefig('/home/siddharth/liver_cirrhosis/ml/results/plots/roc_curves.png',
+plt.savefig('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/plots/roc_curves.png',
             dpi=150, bbox_inches='tight')
 plt.close()
 print("  Saved: roc_curves.png")
@@ -96,7 +96,7 @@ for ax, (name, model) in zip(axes, models.items()):
 plt.suptitle('Confusion Matrices — Phase 1: Healthy vs Cirrhosis (5-Fold CV)',
              fontsize=13, y=1.02)
 plt.tight_layout()
-plt.savefig('/home/siddharth/liver_cirrhosis/ml/results/plots/confusion_matrices.png',
+plt.savefig('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/plots/confusion_matrices.png',
             dpi=150, bbox_inches='tight')
 plt.close()
 print("  Saved: confusion_matrices.png")

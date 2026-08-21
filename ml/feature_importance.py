@@ -3,12 +3,12 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 genus_names = ft.index.tolist()
 ft = ft.T
 
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 common = ft.index.intersection(meta.index)
@@ -35,5 +35,5 @@ for i, (genus, imp) in enumerate(top20.items(), 1):
 
 out = pd.DataFrame({'genus': X.columns, 'importance': rf.feature_importances_})
 out = out.sort_values('importance', ascending=False)
-out.to_csv('/home/siddharth/liver_cirrhosis/ml/results/feature_importance.csv', index=False)
+out.to_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/results/feature_importance.csv', index=False)
 print("\nFull table saved to results/feature_importance.csv")
