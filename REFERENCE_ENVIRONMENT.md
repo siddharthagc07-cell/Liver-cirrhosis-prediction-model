@@ -56,3 +56,34 @@ treat exact match as the target, small documented drift as acceptable.
 4. Compare output table against the reference metrics above
 5. Differences beyond ~0.5-1% in any metric warrant investigation
    (check package versions first, then CPU/threading differences)
+
+## Cloud validation — ICE Cloud (2026-08-20)
+Full reproducibility test performed on ICE Cloud after migrating off the
+Sonali machine (returned to owner). Environment built via mamba (conda's
+solver could not resolve environment.yml's full dependency set within a
+reasonable memory/time budget on this platform; mamba succeeded cleanly).
+
+### Environment
+- Instance: ICE Cloud, 24 vCPU / 12GB RAM
+- Python: 3.10.14 — exact match
+- numpy 1.26.4, pandas 2.2.2, scikit-learn 1.4.2, xgboost 3.2.0,
+  shap 0.49.1, scipy 1.13.0, joblib 1.4.2 — all exact matches
+- Data checksums verified identical to reference above before running
+  (ml/feature_table.tsv, docs/metadata.tsv)
+
+### Result
+phase1_ml_gridsearch.py produced results identical to the reference
+table above to three decimal places, for all four models, including
+best hyperparameters found by GridSearchCV:
+
+| Model | Accuracy | ROC-AUC | F1 | Match |
+|---|---|---|---|---|
+| Random Forest | 0.733 | 0.802 | 0.681 | Exact |
+| XGBoost | 0.692 | 0.770 | 0.673 | Exact |
+| SVM | 0.697 | 0.753 | 0.609 | Exact |
+| Logistic Regression | 0.692 | 0.708 | 0.602 | Exact |
+
+This exceeds the ~0.5-1% tolerance anticipated in the determinism
+caveat above. The theoretical concern about RandomForest n_jobs=-1
+floating-point drift across different CPU/thread counts (4 threads on
+Sonali vs. 24 vCPU on ICE Cloud) did not manifest in this run.
