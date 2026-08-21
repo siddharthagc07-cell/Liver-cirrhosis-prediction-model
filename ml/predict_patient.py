@@ -7,10 +7,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # ── Load training data ─────────────────────────────────────────────────
-ft = pd.read_csv('/home/siddharth/liver_cirrhosis/ml/feature_table.tsv',
+ft = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/ml/feature_table.tsv',
                  sep='\t', skiprows=1, index_col=0)
 ft = ft.T
-meta = pd.read_csv('/home/siddharth/liver_cirrhosis/docs/metadata.tsv',
+meta = pd.read_csv('/drive/siddharth/Liver_Cirrhosis_ML/docs/metadata.tsv',
                    sep='\t', index_col=0)
 
 common = ft.index.intersection(meta.index)

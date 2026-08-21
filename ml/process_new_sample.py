@@ -113,9 +113,9 @@ def process_new_sample(sample_id, fwd_fastq, rev_fastq, work_dir, classifier_pat
 if __name__ == "__main__":
     tsv_out = process_new_sample(
         sample_id="TEST_SAMPLE",
-        fwd_fastq="/home/siddharth/liver_cirrhosis/data/PRJNA471972/SRR7182199_1.fastq.gz",
-        rev_fastq="/home/siddharth/liver_cirrhosis/data/PRJNA471972/SRR7182199_2.fastq.gz",
-        work_dir="/home/siddharth/liver_cirrhosis/ml/new_sample_test",
-        classifier_path="/home/siddharth/liver_cirrhosis/ml/reference/silva-138-99-nb-classifier.qza"
+        fwd_fastq="/drive/siddharth/Liver_Cirrhosis_ML/data/PRJNA471972/SRR7182199_1.fastq.gz",
+        rev_fastq="/drive/siddharth/Liver_Cirrhosis_ML/data/PRJNA471972/SRR7182199_2.fastq.gz",
+        work_dir="/drive/siddharth/Liver_Cirrhosis_ML/ml/new_sample_test",
+        classifier_path="/drive/siddharth/Liver_Cirrhosis_ML/ml/reference/silva-138-99-nb-classifier.qza"
     )
     print(f"Output TSV: {tsv_out}")

@@ -8,7 +8,7 @@ import shap
 import warnings
 warnings.filterwarnings('ignore')
 
-BASE        = '/home/siddharth/liver_cirrhosis'
+BASE        = '/drive/siddharth/Liver_Cirrhosis_ML'
 FEATURE_TSV = f'{BASE}/ml/feature_table.tsv'
 METADATA    = f'{BASE}/docs/metadata.tsv'
 
