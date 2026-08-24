@@ -87,3 +87,46 @@ This exceeds the ~0.5-1% tolerance anticipated in the determinism
 caveat above. The theoretical concern about RandomForest n_jobs=-1
 floating-point drift across different CPU/thread counts (4 threads on
 Sonali vs. 24 vCPU on ICE Cloud) did not manifest in this run.
+
+## Inference pipeline validation — ICE Cloud (2026-08-21)
+Full end-to-end raw-FASTQ-to-prediction test performed on ICE Cloud using
+pipeline_v2.py, to confirm the complete inference path (not just the
+training/CV script above) reproduces correctly on cloud infrastructure.
+
+### Environment gotchas found and fixed
+Building the mamba-based lc_qiime environment left a broken jpeg setup
+that only surfaced when running pipeline_v2.py (phase1_ml_gridsearch.py
+does not touch these libraries, so this was not caught by the training
+validation above). Two libjpeg consumers in the same environment need
+different, ABI-incompatible versions:
+- R's dada2 package requires libjpeg.so.9 (from conda-forge/defaults
+  package jpeg=9b=habf39ab_1)
+- Python's PIL/matplotlib (pulled in via seaborn, used by QIIME2's
+  demux summarize step) requires libjpeg.so.8 (from libjpeg-turbo)
+Conda cannot have both jpeg and libjpeg-turbo installed as tracked
+packages simultaneously (dependency conflict). Fix: install jpeg=9b
+normally, then manually copy a real libjpeg.so.8.3.2 file (sourced from
+a disposable temporary conda env created just to extract it) directly
+into $CONDA_PREFIX/lib/ alongside the .so.9 files, so both coexist on
+disk outside conda's own package tracking. If rebuilding this
+environment from scratch, expect to redo this manual step - it is not
+captured by environment.yml.
+
+Separately, pipeline_v2.py expects the Silva classifier at
+ml/reference/silva-138-99-nb-classifier.qza; if downloaded elsewhere
+(e.g. qiime/ as instructed in README_SETUP.md), symlink it into place.
+
+### Result
+Sample SRR33459675 (paired-end, PRJNA1259947 protocol) processed
+through the full pipeline (import, cutadapt, DADA2, Silva
+classification, genus collapse, SHAP explanation) on ICE Cloud:
+
+| | Original (Sonali) | ICE Cloud |
+|---|---|---|
+| Predicted class | Cirrhosis | Cirrhosis |
+| Confidence | 86.2% | 86.2% |
+| Genera matched | 69/69 | 69/69 |
+| Genera dropped | 0 | 0 |
+
+Exact match. Runtime 4.6 minutes. This confirms the full inference
+pipeline, not just model training, reproduces correctly on ICE Cloud.
