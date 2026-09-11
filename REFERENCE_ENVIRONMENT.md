@@ -130,3 +130,34 @@ classification, genus collapse, SHAP explanation) on ICE Cloud:
 
 Exact match. Runtime 4.6 minutes. This confirms the full inference
 pipeline, not just model training, reproduces correctly on ICE Cloud.
+
+## Single-end inference pipeline validation — ICE Cloud (2026-09-11)
+Full end-to-end test of the single-end/Deblur code path in pipeline_v2.py
+(distinct from the paired-end/DADA2 path validated above), using demo
+sample SRR26159183 (PRJNA1019460 protocol).
+
+### Result
+| | Original (Sonali) | ICE Cloud |
+|---|---|---|
+| Predicted class | Healthy | Healthy |
+| Confidence | 87.8% | 87.8% |
+| Genera matched | 33/33 | 33/33 |
+| Genera dropped | 0 | 0 |
+
+Exact match. This confirms both inference code paths (paired-end/DADA2
+and single-end/Deblur) reproduce correctly on ICE Cloud, completing full
+pipeline validation - not just model training, but the entire raw
+sample-to-prediction flow for every dataset type in this project.
+
+### Platform caveat: ICE Cloud session stability
+ICE Cloud's terminal runs on Kubernetes (hostnames follow the pattern
+siddharth-deploy-<id1>-<id2>-<id3>). During this validation, the
+underlying pod was observed being replaced mid-session multiple times
+without any user-initiated disconnect, killing in-progress jobs
+(including ones backgrounded with nohup, since nohup only survives a
+terminal disconnect, not the pod itself being torn down). Several
+single-end test attempts were lost this way before one finally
+completed on a pod that happened to stay alive long enough. For any
+job expected to run more than a few minutes, check progress frequently
+(every 60-90 seconds) and be prepared to restart; consider
+checkpointing long jobs to persistent storage where possible.
