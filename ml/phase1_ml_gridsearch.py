@@ -68,7 +68,7 @@ model_grids = {
         }
     ),
     'XGBoost': (
-        XGBClassifier(scale_pos_weight=spw, eval_metric='logloss', random_state=42, verbosity=0),
+        XGBClassifier(scale_pos_weight=spw, eval_metric='logloss', random_state=42, verbosity=0, n_jobs=1, tree_method='exact'),
         {
             'n_estimators': [200, 300, 400],
             'max_depth': [3, 4, 6],

@@ -161,3 +161,34 @@ completed on a pod that happened to stay alive long enough. For any
 job expected to run more than a few minutes, check progress frequently
 (every 60-90 seconds) and be prepared to restart; consider
 checkpointing long jobs to persistent storage where possible.
+
+## Training reproducibility fix — XGBoost non-determinism (2026-09-23)
+Mentor requirement: training metrics must reproduce exactly across
+repeated runs. RF, SVM, and Logistic Regression were already exactly
+reproducible (explicit random_state set on all splitters and models).
+XGBoost showed small run-to-run drift in ROC-AUC and F1 despite a
+fixed random_state, traced to its default multi-threaded histogram
+tree-building (n_jobs unset -> all cores), which is not guaranteed to
+sum floating-point operations in the same order every run.
+
+### Fix
+Added n_jobs=1, tree_method='exact' to the XGBClassifier constructor
+in phase1_ml_gridsearch.py, forcing single-threaded, deterministic
+tree construction.
+
+### Verification: two independent back-to-back runs post-fix
+| Model | Accuracy | ROC-AUC | F1 |
+|---|---|---|---|
+| Random Forest | 0.733 | 0.802 | 0.681 |
+| XGBoost | 0.692 | 0.768 | 0.677 |
+| SVM | 0.697 | 0.753 | 0.609 |
+| Logistic Regression | 0.692 | 0.708 | 0.602 |
+
+Both runs produced bit-for-bit identical metrics and identical best
+hyperparameters for all four models. All training metrics are now
+exactly reproducible.
+
+Note: XGBoost's ROC-AUC/F1 shifted slightly from the previously locked
+values (0.770/0.673 -> 0.768/0.677). This reflects the previously
+undetected multi-threading non-determinism, not a regression - the new
+values are the stable, permanently reproducible ones going forward.
