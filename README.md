@@ -1,82 +1,279 @@
-# Predicting Liver Cirrhosis from Gut Microbiome Data using 16S rRNA Sequencing and Machine Learning
 
-A computational bioinformatics pipeline that predicts liver cirrhosis risk from gut microbiome 16S rRNA sequencing data, using machine learning.
+# 🧬 Healthy vs Cirrhosis Classification Using Gut Microbiome Data
 
-## Overview
+A bioinformatics and machine learning project that processes **16S rRNA sequencing data** to investigate differences in the gut microbiome between Healthy individuals and individuals with Cirrhosis.
 
-This project processes raw 16S rRNA FASTQ files through a QIIME2/DADA2 pipeline, generates a genus-level microbial feature table, and trains machine learning models to classify samples as Healthy or Cirrhosis. Model predictions are explained using SHAP.
+The pipeline converts raw sequencing reads into a genus-level microbial abundance table and uses machine learning to classify samples into the two groups.
 
-This is a computational project built entirely on publicly available sequencing data — no wet-lab work was involved.
+> **Key Result:** Random Forest achieved a ROC-AUC of **0.802** in the tuned five-fold cross-validation evaluation, making it the best-performing model among the four evaluated.
+>
+> **Important:** This is an exploratory research project, not a diagnostic tool. The model classifies samples based on their microbiome profiles; it does not predict future disease risk.
 
-## Data
+Built using publicly available sequencing data. No wet-lab experiments were performed.
 
-Three independent public datasets were used, all from NCBI SRA:
+---
 
-| Dataset | Sample Type | Sequencing |
+## 🔍 Project Overview
+
+The gut microbiome is connected to liver health through the gut–liver axis. Changes in microbial composition have been investigated in several liver diseases, including cirrhosis.
+
+This project explores whether genus-level gut microbiome profiles can distinguish Healthy samples from Cirrhosis samples using machine learning.
+
+### Objectives
+
+- Process raw 16S rRNA sequencing data using QIIME 2.
+- Generate a genus-level microbial abundance table.
+- Train and compare multiple machine learning classifiers.
+- Evaluate model performance using cross-validation.
+- Explore model predictions using SHAP explainability.
+
+## 📊 Dataset
+
+The dataset combines publicly available sequencing data from three NCBI BioProjects.
+
+| Dataset | Sequencing Platform | Read Layout | Healthy | Cirrhosis* |
+|---|---|---|---:|---:|
+| PRJNA1259947 | NovaSeq 6000 | Paired-end | 40 | 83 |
+| PRJNA471972 | MiSeq | Paired-end | 20 | 12 |
+| PRJNA1019460 | MiSeq | Single-end | 33 | 7 |
+| **Total** | — | — | **93** | **102** |
+
+**Dataset summary**
+- **195 samples** in total.
+- **429 bacterial genera** in the genus-level feature table.
+- Data derived from human stool samples.
+- 16S rRNA amplicon sequencing data.
+
+\*The Cirrhosis group includes 12 samples from patients with acute-on-chronic liver failure (ACLF), which were grouped with Cirrhosis for this binary classification task.
+
+### Dataset Considerations
+
+The studies differ in sequencing platform, read layout, sequencing depth, and class distribution. These differences may influence the observed microbial profiles and should be considered when interpreting model performance.
+
+## ⚙️ Bioinformatics Pipeline
+
+The workflow transforms raw sequencing reads into a machine learning-ready dataset.
+
+```text
+Raw FASTQ Files
+      │
+      ▼
+QIIME 2 Import
+      │
+      ▼
+Primer Removal
+(Cutadapt, where applicable)
+      │
+      ▼
+Read Denoising
+(DADA2 / Deblur)
+      │
+      ▼
+ASV Feature Table
+      │
+      ▼
+Taxonomic Classification
+(SILVA 138)
+      │
+      ▼
+Genus-Level Abundance Table
+      │
+      ▼
+Total-Sum Scaling (TSS)
+      │
+      ▼
+Machine Learning Models
+      │
+      ▼
+Performance Evaluation
+      │
+      ▼
+SHAP Explainability
+```
+
+### Pipeline Steps
+
+| Step | Method | Purpose |
 |---|---|---|
-| PRJNA471972 | Stool | Paired-end (V3–V4) |
-| PRJNA1259947 | Stool | Paired-end (V3–V4) |
-| PRJNA1019460 | Stool | Single-end (V3–V4) |
+| Sequence processing | QIIME 2 | Import and process sequencing reads |
+| Primer removal | Cutadapt | Remove primers where required |
+| Denoising | DADA2 / Deblur | Infer amplicon sequence variants (ASVs) |
+| Taxonomy | SILVA 138 | Assign taxonomic classifications |
+| Feature preparation | Genus aggregation | Construct genus-level abundance features |
+| Normalization | Total-Sum Scaling (TSS) | Convert counts to relative abundances |
+| Classification | Scikit-learn / XGBoost | Train and compare classifiers |
+| Explainability | SHAP | Examine feature contributions to predictions |
 
-Combined: 195 samples, 429 bacterial genera.
+The machine learning scripts use TSS-normalized genus-level features. Rarefaction and diversity analysis are not part of the model feature-processing workflow described here.
 
-## Pipeline
+## 🤖 Machine Learning
 
-1. Raw FASTQ import into QIIME2
-2. Quality control
-3. Denoising (DADA2 for paired-end, Deblur for single-end)
-4. Taxonomic classification (Silva 138)
-5. Genus-level feature table generation
-6. TSS normalization
-7. Model training (Random Forest, XGBoost, SVM, Logistic Regression)
-8. Hyperparameter tuning (GridSearchCV)
-9. Evaluation (Stratified 5-Fold Cross-Validation)
-10. SHAP explainability
-11. Automated prediction report generation
+Four classifiers were evaluated:
 
-## Results
+- **Random Forest**
+- **XGBoost**
+- **Support Vector Machine (SVM)**
+- **Logistic Regression**
 
-| Model | Accuracy | AUROC | F1-Score |
+### Model Evaluation
+
+The models were evaluated using standard five-fold cross-validation. Two evaluations were performed: one with fixed model settings and another using GridSearchCV for hyperparameter tuning.
+
+### Results
+
+#### Fixed Model Settings
+
+| Model | Accuracy | ROC-AUC |
+|---|---:|---:|
+| Random Forest | 0.723 | **0.806** |
+| XGBoost | 0.703 | 0.778 |
+| SVM | 0.651 | 0.686 |
+| Logistic Regression | 0.692 | 0.708 |
+
+#### Hyperparameter-Tuned Models
+
+| Model | Accuracy | ROC-AUC | F1-Score (Healthy) |
+|---|---:|---:|---:|
+| Random Forest | **0.733** | **0.802** | **0.681** |
+| XGBoost | 0.692 | 0.768 | 0.677 |
+| SVM | 0.697 | 0.753 | 0.609 |
+| Logistic Regression | 0.692 | 0.708 | 0.602 |
+
+*The F1-score in the tuned evaluation refers to the Healthy class. Healthy is encoded as 1 and Cirrhosis as 0.*
+
+### Best-Performing Model: Random Forest
+
+Random Forest achieved the highest ROC-AUC in both evaluations:
+
+- **ROC-AUC:** 0.806 with fixed settings.
+- **ROC-AUC:** 0.802 after hyperparameter tuning.
+- **Accuracy:** 0.733 in the tuned evaluation.
+
+Random Forest was selected as the final model based on its performance across the two evaluations.
+
+**Interpretation:** These results indicate that the model can distinguish between the two classes to some extent under the evaluated cross-validation setup. They do not establish clinical usefulness or reliable performance on independent datasets.
+
+## 🔬 Model Explainability
+
+SHAP (SHapley Additive exPlanations) is used to examine how microbial features contribute to model predictions.
+
+The explanations help investigate:
+- Which microbial genera influence model predictions.
+- Whether particular features push predictions toward Healthy or Cirrhosis.
+- How feature contributions vary across samples.
+
+SHAP describes how the trained model uses its features. A feature's importance does not establish that the microorganism causes or protects against cirrhosis.
+
+## 🧪 Input Requirements
+
+The current pipeline is designed for a specific set of 16S rRNA sequencing inputs.
+
+**Supported data**
+- Human stool samples.
+- Illumina MiSeq or NovaSeq 6000 data.
+- Paired-end FASTQ files with the expected primers attached.
+- Single-end FASTQ files that have already been primer-trimmed.
+
+### Study-Specific Processing Settings
+
+| BioProject | Read Layout | 16S Region | Processing |
 |---|---|---|---|
-| **Random Forest** | **73.3%** | **0.802** | **0.681** |
-| XGBoost | 69.2% | 0.770 | 0.673 |
-| SVM | 69.7% | 0.753 | 0.609 |
-| Logistic Regression | 69.2% | 0.708 | 0.602 |
+| PRJNA471972 | Paired-end | V3–V4 | DADA2; forward truncation 260 bp, reverse truncation 200 bp |
+| PRJNA1259947 | Paired-end | Not documented in the cited ENA description | DADA2; forward truncation 230 bp, reverse truncation 200 bp |
+| PRJNA1019460 | Single-end | Not documented | Deblur; trim length 250 bp |
 
-Random Forest was selected as the final model.
+For PRJNA471972, the primer sequences used are:
 
-## Technologies Used
+- Forward: `CCTACGGGNGGCWGCAG`
+- Reverse: `GACTACHVGGGTATCTAATCC`
 
-**Operating System**
-- Linux (Ubuntu)
+For PRJNA1259947:
 
-**Bioinformatics**
-- QIIME2 — microbiome analysis platform (used here for 16S rRNA processing)
-- DADA2 — denoising & ASV inference (paired-end)
-- Deblur — denoising & ASV inference (single-end)
-- SILVA 138 — taxonomic reference database
+- Forward: `TACGGRAGGCAGCAG`
+- Reverse: `AGGGTATCTAATCCT`
 
-**Programming & Data Processing**
-- Python
-- pandas
-- NumPy
+The pipeline also requires the appropriate SILVA 138 classifier and the downstream genus aggregation and TSS normalization steps.
 
-**Machine Learning**
-- scikit-learn
-- Random Forest
-- XGBoost
-- Support Vector Machine (SVM)
-- Logistic Regression
+**Important:** Paired-end reads without the required primers are discarded by the current preprocessing workflow. Paired-end files that have already had these primers removed are not supported by the current configuration.
 
-**Model Explainability**
-- SHAP
+Shotgun metagenomics, other sample types, other primer sets, alternative sequencing platforms, and different reference databases have not been validated for this pipeline.
 
-## Limitations
-- Small sample size (195) across 3 cohorts
-- Genus-level resolution only
+## 🚀 Usage
 
-## Future Scope
-- Species/strain-level classification
-- Include clinical metadata (diet, medication, disease stage)
-- Deploy Flask app with full UI
-- Expand dataset size
+The inference script is:
+
+`ml/pipeline_v2.py`
+
+It is intended to process supported sequencing inputs and produce:
+
+- Predicted class: Healthy or Cirrhosis.
+- Prediction probability.
+- SHAP-based feature explanation.
+
+The probability represents the model's estimated class probability, not a patient's clinical risk or the probability of developing cirrhosis in the future.
+
+Refer to [`README_SETUP.md`](README_SETUP.md) for environment setup and execution instructions.
+
+**Note:** The scripts contain environment-specific paths that may need to be updated before running the pipeline on another machine.
+
+## ⚠️ Limitations
+
+- The dataset contains 195 samples from three public studies.
+- Differences between studies may affect microbial profiles and model performance.
+- Twelve ACLF samples are grouped with the Cirrhosis class.
+- The analysis uses genus-level 16S rRNA profiles; species- and strain-level identification is not established.
+- Performance is based on the evaluated cross-validation procedures and should not be interpreted as clinical validation.
+- The input pipeline supports specific sequencing configurations and processing settings.
+- Some scripts contain hard-coded paths.
+- The project does not currently provide a graphical user interface.
+
+The results should be interpreted as an exploratory investigation of gut microbiome-based classification, not as evidence that the model is ready for use on patients.
+
+## 🔮 Future Work
+
+- Implement nested cross-validation for more rigorous model evaluation.
+- Validate the model using an independent dataset.
+- Incorporate relevant clinical metadata.
+- Expand the dataset with additional well-characterized samples.
+- Improve portability by removing hard-coded paths.
+- Develop a web application after sufficient validation.
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|---|---|
+| Bioinformatics | QIIME 2, DADA2, Deblur |
+| Taxonomy | SILVA 138 |
+| Programming | Python |
+| Data processing | pandas, NumPy |
+| Machine learning | scikit-learn, XGBoost |
+| Explainability | SHAP |
+| Environment | Linux, Ubuntu |
+
+## 📁 Project Resources
+
+| Resource | File |
+|---|---|
+| Setup instructions | [`README_SETUP.md`](README_SETUP.md) |
+| Reference environment and results | [`REFERENCE_ENVIRONMENT.md`](REFERENCE_ENVIRONMENT.md) |
+| Tuned model evaluation | [`ml/phase1_ml_gridsearch.py`](ml/phase1_ml_gridsearch.py) |
+| Fixed-settings model evaluation | [`ml/phase1_ml.py`](ml/phase1_ml.py) |
+| Within-study evaluation | [`validation/within_cohort.py`](validation/within_cohort.py) |
+| Model saving | [`ml/save_model.py`](ml/save_model.py) |
+| Prediction pipeline | [`ml/pipeline_v2.py`](ml/pipeline_v2.py) |
+
+## 📚 Data Sources
+
+The sequencing datasets were obtained from the NCBI Sequence Read Archive (SRA).
+
+- [PRJNA1259947](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1259947)
+- [PRJNA471972](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA471972)
+- [PRJNA1019460](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1019460)
+
+## 📌 Disclaimer
+
+This repository is intended for research and educational purposes only. It is not a medical device, does not provide a diagnosis, and must not be used to make clinical decisions.
+
+---
+
+**Project focus:** Bioinformatics · Gut Microbiome · 16S rRNA Sequencing · Machine Learning · Explainable AI
