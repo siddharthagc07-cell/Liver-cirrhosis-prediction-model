@@ -7,7 +7,7 @@ The pipeline converts raw sequencing reads into a genus-level microbial abundanc
 
 > **Key Result:** Random Forest achieved a ROC-AUC of **0.802** in the tuned five-fold cross-validation evaluation, making it the best-performing model among the four evaluated.
 >
-> **Important:** This is an exploratory research project, not a diagnostic tool. The model classifies samples based on their microbiome profiles; it does not predict future disease risk.
+> **Important:** This is an exploratory research project, and not a legitimate diagnostic tool.
 
 Built using publicly available sequencing data. No wet-lab experiments were performed.
 
@@ -104,7 +104,7 @@ SHAP Explainability
 | Classification | Scikit-learn / XGBoost | Train and compare classifiers |
 | Explainability | SHAP | Examine feature contributions to predictions |
 
-The machine learning scripts use TSS-normalized genus-level features. Rarefaction and diversity analysis are not part of the model feature-processing workflow described here.
+The machine learning scripts use TSS-normalized genus-level features.
 
 ## 🤖 Machine Learning
 
@@ -151,7 +151,7 @@ Random Forest achieved the highest ROC-AUC in both evaluations:
 
 Random Forest was selected as the final model based on its performance across the two evaluations.
 
-**Interpretation:** These results indicate that the model can distinguish between the two classes to some extent under the evaluated cross-validation setup. They do not establish clinical usefulness or reliable performance on independent datasets.
+**Interpretation:** These results indicate that the model can distinguish between the two classes to some extent under the evaluated cross-validation setup.
 
 ## 🔬 Model Explainability
 
@@ -210,33 +210,22 @@ It is intended to process supported sequencing inputs and produce:
 - Prediction probability.
 - SHAP-based feature explanation.
 
-The probability represents the model's estimated class probability, not a patient's clinical risk or the probability of developing cirrhosis in the future.
-
 Refer to [`README_SETUP.md`](README_SETUP.md) for environment setup and execution instructions.
 
 **Note:** The scripts contain environment-specific paths that may need to be updated before running the pipeline on another machine.
 
 ## ⚠️ Limitations
 
-- The dataset contains 195 samples from three public studies.
-- Differences between studies may affect microbial profiles and model performance.
-- Twelve ACLF samples are grouped with the Cirrhosis class.
-- The analysis uses genus-level 16S rRNA profiles; species- and strain-level identification is not established.
-- Performance is based on the evaluated cross-validation procedures and should not be interpreted as clinical validation.
-- The input pipeline supports specific sequencing configurations and processing settings.
-- Some scripts contain hard-coded paths.
-- The project does not currently provide a graphical user interface.
-
-The results should be interpreted as an exploratory investigation of gut microbiome-based classification, not as evidence that the model is ready for use on patients.
+- The model is trained on limited data (195 samples from three public studies).
+- The model is specific to the sequencing setup it was built for: the target 16S region, primers, read layout and processing settings listed in Input Requirements. It does not work beyond them.
+- The model is strictly specific to the data it was trained on.
+- The project does not have a graphical user interface (GUI).
 
 ## 🔮 Future Work
 
-- Implement nested cross-validation for more rigorous model evaluation.
-- Validate the model using an independent dataset.
-- Incorporate relevant clinical metadata.
-- Expand the dataset with additional well-characterized samples.
-- Improve portability by removing hard-coded paths.
-- Develop a web application after sufficient validation.
+- Add more data in the future, so the model is exposed to new patterns.
+- Improve accuracy and the other evaluation metrics.
+- Make the model available for public use once it is trained well on diverse conditions.
 
 ## 🛠️ Tech Stack
 
